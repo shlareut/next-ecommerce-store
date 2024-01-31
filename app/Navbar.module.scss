@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 10px;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoSubTitle {
+  font-size: 12px;
+}
+
+.linkList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}

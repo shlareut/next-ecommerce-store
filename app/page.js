@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductList } from './database/database';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 
 export default function HomePage() {
   const products = getProductList();
