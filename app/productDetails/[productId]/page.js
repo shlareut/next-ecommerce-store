@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { getProductDetails } from '../../database/database';
 
 export const metadata = {

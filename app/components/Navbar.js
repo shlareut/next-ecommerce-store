@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import logo from '../public/logo/logo2.jpeg';
+import logo from '../../public/logo/logo2.jpeg';
 import Button from './Button';
 import styles from './Navbar.module.scss';
 
