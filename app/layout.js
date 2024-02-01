@@ -1,6 +1,7 @@
 import './globals.scss';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -10,7 +11,7 @@ export const metadata = {
     default: 'All about junk | Junkyard',
     template: '%s | Junkyard 💩',
   },
-  description: 'All about junk.',
+  description: 'Only the best junk',
 };
 
 export default function RootLayout({ children }) {
@@ -23,6 +24,9 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

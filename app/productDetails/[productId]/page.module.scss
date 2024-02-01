@@ -1,0 +1,53 @@
+.pageWrapper {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageTitle {
+  margin-bottom: 25px;
+}
+
+.pageContent {
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 25px;
+}
+
+.pageBody {
+  border: 1px solid;
+}
+
+.sidebar {
+  border: 1px solid;
+  .sidebox {
+    width: 365px;
+    height: 200px;
+    position: fixed;
+    border: 1px solid;
+  }
+}
+
+// .pageWrapper {
+//   height: 100dvh;
+//   display: grid;
+//   grid-template-columns: 4fr 2fr;
+// }
+
+// .contentWrapper {
+//   border: 1px solid;
+// }
+
+// .productDetailsTitle {
+//   margin-bottom: 25px;
+// }
+
+// .imageWrapper {
+//   width: 100%;
+//   border: 1px solid;
+// }
+
+// .sidebar {
+//   border: 1px solid;
+// }
