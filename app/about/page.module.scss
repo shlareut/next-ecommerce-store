@@ -1,0 +1,15 @@
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  height: 100dvh;
+}
+
+.textBlock {
+  margin-top: 25px;
+  text-align: justify;
+}
+
+.text {
+  margin-bottom: 10px;
+}
