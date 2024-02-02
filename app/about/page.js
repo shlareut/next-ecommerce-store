@@ -9,11 +9,11 @@ export default function AboutPage() {
       <Image alt="" src={logo} width={300} />
       <div className={styles.textBlock}>
         <p className={styles.text}>
-          Junkyard stands for the finest quality junk you could shop on the
-          internet. Dive into an eclectic selection of discarded odds and ends,
-          where "out with the old" takes on a whole new meaning. Our online
-          store is the go-to destination for those who appreciate the beauty in
-          the banal and find charm in the discarded.
+          Junkyard stands for the finest quality junk you can shop online. Dive
+          into an eclectic selection of discarded odds and ends, where "out with
+          the old" takes on a whole new meaning. Our online store is the go-to
+          destination for those who appreciate the beauty in the banal and find
+          charm in the discarded.
         </p>
 
         <p className={styles.text}>
