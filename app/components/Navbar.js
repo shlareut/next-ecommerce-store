@@ -29,13 +29,10 @@ export default function Navbar() {
           <LinkButton href="/" variant="secondary" text="Products" />
         </li>
         <li>
-          <Button variant="secondary" text="About" />
+          <LinkButton href="/about" variant="secondary" text="About" />
         </li>
         <li>
-          <Button variant="secondary" text="Test" />
-        </li>
-        <li>
-          <LinkButton variant="cart" text="Junk cart 🛒" href="/cart" />
+          <LinkButton variant="cart" text="Junk cart" href="/cart" />
         </li>
       </ul>
     </div>
