@@ -1,11 +1,13 @@
 'use client';
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import styles from './CartButton.module.scss';
 
 export default function CartButton(props) {
   const { cart, setCart } = useContext(CartContext);
   return (
     <button
+      className={styles.button}
       onClick={() => {
         const newCart = [...cart];
         newCart.push({

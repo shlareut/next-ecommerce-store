@@ -41,6 +41,9 @@ export default function ProductDetailsPage(props) {
         <div className={styles.sidebar}>
           <div className={styles.sidebox}>
             Sidebox <br />
+            <br />
+            <br />
+            <br />
             <CartButton
               productId={productDetails.id}
               productTitle={productDetails.title}
