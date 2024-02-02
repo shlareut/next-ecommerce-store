@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import CartPage from './cart/page';
 import { getProductList } from './database/database';
 import styles from './page.module.scss';
 
@@ -59,6 +60,9 @@ export default function HomePage() {
             ''
           );
         })}
+      </div>
+      <div>
+        <CartPage />
       </div>
     </>
   );

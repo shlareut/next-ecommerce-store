@@ -1,14 +1,15 @@
 'use client';
+import Link from 'next/link';
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import styles from './Button.module.scss';
+import styles from './LinkButton.module.scss';
 
-export default function Button(props) {
+export default function LinkButton(props) {
   const { cart } = useContext(CartContext);
   return (
-    <button className={styles[props.variant]}>
+    <Link href={props.href} className={styles[props.variant]}>
       {props.text}
       {props.variant === 'cart' ? ` (${cart.length})` : ''}
-    </button>
+    </Link>
   );
 }

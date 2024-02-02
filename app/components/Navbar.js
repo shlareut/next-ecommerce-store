@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import logo from '../../public/logo/logo2.jpeg';
 import Button from './Button';
+import LinkButton from './LinkButton';
 import styles from './Navbar.module.scss';
 
 export default function Navbar() {
@@ -25,16 +26,16 @@ export default function Navbar() {
       </div>
       <ul className={styles.linkList}>
         <li>
-          <Button variant="secondary" text="Products" />
+          <LinkButton href="/" variant="secondary" text="Products" />
         </li>
         <li>
           <Button variant="secondary" text="About" />
         </li>
         <li>
-          <Button variant="secondary" text="TEST" />
+          <Button variant="secondary" text="Test" />
         </li>
         <li>
-          <Button variant="primary" text="Junk cart (0)" />
+          <LinkButton variant="cart" text="Junk cart 🛒" href="/cart" />
         </li>
       </ul>
     </div>
