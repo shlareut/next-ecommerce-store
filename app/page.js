@@ -16,8 +16,8 @@ export default function HomePage() {
             <div className={styles.productCard} key={`product-${product.id}`}>
               <Link
                 href={`/productDetails/${product.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                // target="_blank"
+                // rel="noopener noreferrer"
               >
                 {product.isDeal ? (
                   <div className={styles.deal}>🔥 Hot junk</div>
@@ -60,9 +60,6 @@ export default function HomePage() {
             ''
           );
         })}
-      </div>
-      <div>
-        <CartPage />
       </div>
     </>
   );

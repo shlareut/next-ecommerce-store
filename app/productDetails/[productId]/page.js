@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import CartButton from '../../components/CartButton';
 import { getProductDetails } from '../../database/database';
 import styles from './page.module.scss';
 
@@ -41,7 +41,15 @@ export default function ProductDetailsPage(props) {
         <div className={styles.sidebar}>
           <div className={styles.sidebox}>
             Sidebox <br />
-            <button> Add to junk cart</button>
+            <CartButton
+              productId={productDetails.id}
+              productTitle={productDetails.title}
+              productCondition={productDetails.condition}
+              productCategory={productDetails.category}
+              productImage={productDetails.image}
+              productPrice={productDetails.price}
+              productCurrency={productDetails.currency}
+            />
           </div>
         </div>
       </div>

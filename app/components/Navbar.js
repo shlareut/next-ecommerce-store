@@ -32,7 +32,7 @@ export default function Navbar() {
           <LinkButton href="/about" variant="secondary" text="About" />
         </li>
         <li>
-          <LinkButton variant="cart" text="Junk cart" href="/cart" />
+          <LinkButton variant="cart" text="Cart" href="/cart" />
         </li>
       </ul>
     </div>
