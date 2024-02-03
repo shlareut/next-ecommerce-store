@@ -19,6 +19,9 @@ export default function CartButton(props) {
           price: props.productPrice,
           currency: props.productCurrency,
         });
+        // Testing out local storage below
+        window.localStorage.setItem('cart', JSON.stringify(newCart));
+        // END TEST
         setCart(newCart);
       }}
     >

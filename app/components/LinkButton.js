@@ -6,6 +6,8 @@ import styles from './LinkButton.module.scss';
 
 export default function LinkButton(props) {
   const { cart } = useContext(CartContext);
+  // LOCALSTORAGE TEST BELOW
+  const localStorageCart = JSON.parse(window.localStorage.getItem('cart'));
   return (
     <Link href={props.href}>
       <div className={styles[props.variant]}>
