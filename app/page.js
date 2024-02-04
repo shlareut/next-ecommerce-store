@@ -6,11 +6,11 @@ import { getDbProducts } from './database/db';
 import styles from './page.module.scss';
 
 export default async function HomePage() {
-  const products = getProductList();
+  // const products = getProductList();
   const dbProducts = await getDbProducts();
   return (
     <>
-      <h1 className={styles.productListingsTitle}>Popular junk</h1>
+      {/* <h1 className={styles.productListingsTitle}>Popular junk</h1>
       <div className={styles.productListing}>
         {products.map((product) => {
           const strikePrice = Math.round(product.price * 1.5);
@@ -62,9 +62,11 @@ export default async function HomePage() {
             ''
           );
         })}
-      </div>
+      </div> */}
       {/* DB Products start below */}
-      <h1 className={styles.productListingsTitle}>Database junk</h1>
+      {/* DB Products start below */}
+      {/* DB Products start below */}
+      <h1 className={styles.productListingsTitle}>Popular junk</h1>
       <div className={styles.productListing}>
         {dbProducts.map((product) => {
           const strikePrice = Math.round(product.price * 1.5);
