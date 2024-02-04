@@ -11,3 +11,9 @@ export async function getDbProducts() {
   const products = await sql`SELECT * FROM products`;
   return products;
 }
+
+export async function getDbProductDetails(productId) {
+  const productDetails =
+    await sql`SELECT * FROM products where id = ${productId}`;
+  return productDetails;
+}
