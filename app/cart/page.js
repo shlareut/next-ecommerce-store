@@ -130,7 +130,7 @@ export default function CartPage() {
       </div>
       <div className={styles.cartTotal}>
         {!cart.length ? '' : `Total: ${sum}€`}
-        <button>Checkout</button>
+        {!cart.length ? '' : <button>Checkout</button>}
       </div>
     </div>
   );

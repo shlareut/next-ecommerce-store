@@ -12,7 +12,12 @@ export default function Navbar() {
       <div className={styles.logo}>
         <div>
           <Link href={'/'}>
-            <Image alt="logo" src={logo} width={50} />
+            <Image
+              className={styles.logoImage}
+              alt="logo"
+              src={logo}
+              width={50}
+            />
           </Link>
         </div>
         <div className={styles.logoText}>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import logo from '../../public/logo/logo.jpeg';
+import { sql } from '../database/db';
 import styles from './page.module.scss';
 
 export default function AboutPage() {

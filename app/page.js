@@ -2,10 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CartPage from './cart/page';
 import { getProductList } from './database/database';
+import { getDbProducts } from './database/db';
 import styles from './page.module.scss';
 
-export default function HomePage() {
+export default async function HomePage() {
   const products = getProductList();
+  const dbProducts = await getDbProducts();
   return (
     <>
       <h1 className={styles.productListingsTitle}>Popular junk</h1>
@@ -60,6 +62,14 @@ export default function HomePage() {
             ''
           );
         })}
+      </div>
+      {/* DB Products start below */}
+      <div>
+        <ul>
+          {dbProducts.map((item) => {
+            return <li key={item.id}>{item.title}</li>;
+          })}
+        </ul>
       </div>
     </>
   );

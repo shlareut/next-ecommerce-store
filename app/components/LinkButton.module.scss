@@ -12,6 +12,7 @@
   &:hover {
     transform: translateY(-0.375rem);
     background-color: #e5e5e5;
+    transition-duration: 0.25s;
   }
 }
 
@@ -29,6 +30,7 @@
   box-shadow: 6px 6px 0px #b2b2b2;
   &:hover {
     transform: translateY(-0.375rem);
+    transition-duration: 0.25s;
   }
   & > * {
     color: white;

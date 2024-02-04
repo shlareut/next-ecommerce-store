@@ -12,6 +12,16 @@
   gap: 10px;
 }
 
+@keyframes rotateAnimation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logoImage:hover {
+  animation: rotateAnimation 1s infinite;
+}
+
 .logoText {
   display: flex;
   flex-direction: column;
