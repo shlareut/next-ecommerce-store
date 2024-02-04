@@ -120,7 +120,9 @@ export default function CartPage() {
                     >
                       ✖️
                     </button>
-                    <div className={styles.totalItemQuantity}>100EURO</div>
+                    <div className={styles.totalItemQuantity}>
+                      {item.quantity * item.price}€
+                    </div>
                   </div>
                 </div>
               );
@@ -128,6 +130,7 @@ export default function CartPage() {
       </div>
       <div className={styles.cartTotal}>
         {!cart.length ? '' : `Total: ${sum}€`}
+        <button>Checkout</button>
       </div>
     </div>
   );

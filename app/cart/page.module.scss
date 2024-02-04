@@ -82,7 +82,6 @@
 }
 
 .totalQuantityWrapper {
-  border: 1px solid;
   margin-left: auto;
   display: flex;
   flex-direction: column;
@@ -103,9 +102,15 @@
 }
 
 .totalItemQuantity {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .cartTotal {
   font-size: 18px;
   font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 25px;
 }
