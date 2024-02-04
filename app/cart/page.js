@@ -39,7 +39,7 @@ export default function CartPage() {
                         {item.category}
                       </div>
                       <div className={styles.productPrice}>
-                        {item.price}
+                        {Math.round(item.price)}
                         {item.currency}
                       </div>
                     </div>

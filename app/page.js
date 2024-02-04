@@ -77,7 +77,7 @@ export default async function HomePage() {
                 // target="_blank"
                 // rel="noopener noreferrer"
               >
-                {product.isDeal ? (
+                {product.isdeal ? (
                   <div className={styles.deal}>🔥 Hot junk</div>
                 ) : (
                   ''

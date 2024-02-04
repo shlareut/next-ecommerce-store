@@ -89,10 +89,12 @@ export default async function ProductDetailsPage(props) {
         </div>
         <div className={styles.sidebar}>
           <div className={styles.sidebox}>
-            Sidebox <br />
-            <br />
-            <br />
-            <br />
+            <div className={styles.sideboxTitle}>Add to cart</div>
+            <div className={styles.itemQuantity}>
+              <button className={styles.quantityButton}>−</button>
+              {/* Item quantity needs to come here */}0
+              <button className={styles.quantityButton}>+</button>
+            </div>
             <CartButton
               productId={dbProductDetails[0].id}
               productTitle={dbProductDetails[0].title}
