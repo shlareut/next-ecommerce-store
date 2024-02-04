@@ -14,6 +14,9 @@
   display: flex;
   flex-direction: row;
   gap: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 0.5px solid grey;
 }
 
 .productImage {
@@ -23,6 +26,7 @@
 .productDetails {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .productTitle {
@@ -47,6 +51,58 @@
   flex-direction: row;
   font-size: 18px;
   font-weight: 600;
+}
+
+.itemQuantity {
+  border: 1px solid;
+  border-radius: 2px;
+  width: min-content;
+  color: grey;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityButton {
+  background-color: transparent;
+  padding: 5px 10px;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  color: grey;
+  font-weight: 600;
+  font-size: 14px;
+  &:hover {
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.totalQuantityWrapper {
+  border: 1px solid;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.deleteButton {
+  font-weight: 800;
+  font-size: 18px;
+  background-color: transparent;
+  border: 0px;
+  &:hover {
+    transform: rotate(90deg);
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+}
+
+.totalItemQuantity {
 }
 
 .cartTotal {

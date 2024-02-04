@@ -8,6 +8,7 @@ export default function RemoveFromCartButton(props) {
     <button
       onClick={() => {
         const newCart = cart.filter((item) => item.id !== props.productId);
+        console.log(newCart);
         // Testing out local storage below
         window.localStorage.setItem('cart', JSON.stringify(newCart));
         // END TEST
