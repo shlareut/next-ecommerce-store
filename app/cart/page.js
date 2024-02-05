@@ -1,5 +1,6 @@
 'use client';
 
+import Cookies from 'js-cookie';
 import Image from 'next/image';
 import { useContext } from 'react';
 import RemoveFromCartButton from '../components/RemoveFromCartButton';
@@ -12,8 +13,8 @@ export default function CartPage() {
     return (accumulator += item.price * item.quantity);
   }, 0);
   // LOCALSTORAGE TEST BELOW
-  const localStorageCart = JSON.parse(window.localStorage.getItem('cart'));
-  console.log(localStorageCart.length);
+  // const localStorageCart = JSON.parse(window.localStorage.getItem('cart'));
+  // console.log(localStorageCart.length);
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.productWrapper}>
@@ -58,20 +59,22 @@ export default function CartPage() {
                                   }
                                 : cartItem,
                             );
-                            window.localStorage.setItem(
-                              'cart',
-                              JSON.stringify(newCart),
-                            );
+                            // window.localStorage.setItem(
+                            //   'cart',
+                            //   JSON.stringify(newCart),
+                            // );
+                            Cookies.set('cart', JSON.stringify(newCart));
                             setCart(newCart);
                           } else {
                             // if quantity is 1 then remove item from cart
                             const newCart = cart.filter(
                               (cartItem) => cartItem.id !== item.id,
                             );
-                            window.localStorage.setItem(
-                              'cart',
-                              JSON.stringify(newCart),
-                            );
+                            // window.localStorage.setItem(
+                            //   'cart',
+                            //   JSON.stringify(newCart),
+                            // );
+                            Cookies.set('cart', JSON.stringify(newCart));
                             setCart(newCart);
                           }
                         }}
@@ -92,10 +95,11 @@ export default function CartPage() {
                                 }
                               : cartItem,
                           );
-                          window.localStorage.setItem(
-                            'cart',
-                            JSON.stringify(newCart),
-                          );
+                          // window.localStorage.setItem(
+                          //   'cart',
+                          //   JSON.stringify(newCart),
+                          // );
+                          Cookies.set('cart', JSON.stringify(newCart));
                           setCart(newCart);
                         }}
                       >
@@ -110,11 +114,12 @@ export default function CartPage() {
                         const newCart = cart.filter(
                           (cartItem) => cartItem.id !== item.id,
                         );
-                        window.localStorage.setItem(
-                          'cart',
-                          JSON.stringify(newCart),
-                        );
+                        // window.localStorage.setItem(
+                        //   'cart',
+                        //   JSON.stringify(newCart),
+                        // );
                         // END TEST
+                        Cookies.set('cart', JSON.stringify(newCart));
                         setCart(newCart);
                       }}
                     >

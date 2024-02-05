@@ -7,7 +7,7 @@ import styles from './LinkButton.module.scss';
 export default function LinkButton(props) {
   const { cart } = useContext(CartContext);
   // LOCALSTORAGE TEST BELOW
-  const localStorageCart = JSON.parse(window.localStorage.getItem('cart'));
+  // const localStorageCart = JSON.parse(window.localStorage.getItem('cart'));
   const itemCount = cart.reduce((accumulator, item) => {
     return (accumulator += item.quantity);
   }, 0);
