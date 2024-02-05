@@ -32,8 +32,12 @@ export default function AboutPage() {
           most ordinary of objects. Every piece comes with a history – a journey
           from functionality to fabulousness.
         </p>
+        <TestButton type="cartLink" />
+        <TestButton type="link" to="/" />
+        <TestButton type="addCartItem" />
+        <TestButton type="removeCartItem" />
+        <TestButton />
       </div>
-      <TestButton variant="cart" />
     </div>
   );
 }
