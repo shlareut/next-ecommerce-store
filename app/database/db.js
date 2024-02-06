@@ -13,7 +13,7 @@ export async function getDbProducts() {
 }
 
 export async function getDbProductDetails(productId) {
-  const productDetails =
+  const [productDetails] =
     await sql`SELECT * FROM products where id = ${productId}`;
   return productDetails;
 }

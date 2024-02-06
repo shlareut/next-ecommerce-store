@@ -2,6 +2,8 @@ import Image from 'next/image';
 import CartButton from '../../components/CartButton';
 import { getProductDetails } from '../../database/database';
 import { getDbProductDetails } from '../../database/db';
+import { updateCookie } from './actions';
+import CookieButton from './CookieButton';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -62,29 +64,28 @@ export default async function ProductDetailsPage(props) {
       {/* DB ProductDetails starts here */}
       {/* DB ProductDetails starts here */}
       {/* DB ProductDetails starts here */}
-      <h1 className={styles.pageTitle}>{dbProductDetails[0]?.title}</h1>
+      <h1 className={styles.pageTitle}>{dbProductDetails?.title}</h1>
       <div className={styles.pageContent}>
         <div className={styles.pageBody}>
           <div className={styles.imageWrapper}>
             <Image
-              alt={dbProductDetails[0]?.title}
-              src={dbProductDetails[0]?.image}
+              alt={dbProductDetails?.title}
+              src={dbProductDetails?.image}
               width={300}
               height={300}
             />
           </div>
           <div className={styles.text}>
             <div>
-              Category: {dbProductDetails[0]?.category}, Condition:{' '}
-              {dbProductDetails[0]?.condition}
+              Category: {dbProductDetails?.category}, Condition:{' '}
+              {dbProductDetails?.condition}
             </div>
-            <div>Title: {dbProductDetails[0]?.title}</div>
-            <div>Deal: {dbProductDetails[0]?.isDeal ? 'HotJUNK' : '-'}</div>
+            <div>Title: {dbProductDetails?.title}</div>
+            <div>Deal: {dbProductDetails?.isDeal ? 'HotJUNK' : '-'}</div>
             <div>
-              Price: {dbProductDetails[0]?.price}{' '}
-              {dbProductDetails[0]?.currency}
+              Price: {dbProductDetails?.price} {dbProductDetails?.currency}
             </div>
-            <div>{JSON.stringify(dbProductDetails[0]?.details)}</div>
+            <div>{JSON.stringify(dbProductDetails?.details)}</div>
           </div>
         </div>
         <div className={styles.sidebar}>
@@ -96,14 +97,15 @@ export default async function ProductDetailsPage(props) {
               <button className={styles.quantityButton}>+</button>
             </div>
             <CartButton
-              productId={dbProductDetails[0].id}
-              productTitle={dbProductDetails[0].title}
-              productCondition={dbProductDetails[0].condition}
-              productCategory={dbProductDetails[0].category}
-              productImage={dbProductDetails[0].image}
-              productPrice={dbProductDetails[0].price}
-              productCurrency={dbProductDetails[0].currency}
+              productId={dbProductDetails.id}
+              productTitle={dbProductDetails.title}
+              productCondition={dbProductDetails.condition}
+              productCategory={dbProductDetails.category}
+              productImage={dbProductDetails.image}
+              productPrice={dbProductDetails.price}
+              productCurrency={dbProductDetails.currency}
             />
+            <CookieButton value={dbProductDetails} />
           </div>
         </div>
       </div>

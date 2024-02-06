@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import logo from '../../public/logo/logo2.jpeg';
 import Button from './Button';
-import LinkButton from './LinkButton';
 import styles from './Navbar.module.scss';
 
 export default function Navbar() {
@@ -31,13 +29,13 @@ export default function Navbar() {
       </div>
       <ul className={styles.linkList}>
         <li>
-          <LinkButton href="/" variant="secondary" text="Products" />
+          <Button type="link" to="/" />
         </li>
         <li>
-          <LinkButton href="/about" variant="secondary" text="About" />
+          <Button type="link" to="/about" />
         </li>
         <li>
-          <LinkButton variant="cart" text="Cart" href="/cart" />
+          <Button type="cartLink" />
         </li>
       </ul>
     </div>

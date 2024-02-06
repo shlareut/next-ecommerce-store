@@ -1,10 +1,13 @@
+import { cookies } from 'next/headers';
 import Image from 'next/image';
 import React from 'react';
 import logo from '../../public/logo/logo.jpeg';
-import TestButton from '../components/TestButton';
+import Button from '../components/Button';
+import CookieButton from './CookieButton';
 import styles from './page.module.scss';
 
 export default function AboutPage() {
+  const getCookie = cookies().getAll();
   return (
     <div className={styles.contentWrapper}>
       <Image alt="" src={logo} width={300} />
@@ -16,7 +19,6 @@ export default function AboutPage() {
           destination for those who appreciate the beauty in the banal and find
           charm in the discarded.
         </p>
-
         <p className={styles.text}>
           At Junkyard, we've mastered the art of turning trash into treasure,
           and our inventory boasts a fascinating array of items that others may
@@ -24,7 +26,6 @@ export default function AboutPage() {
           shopping experience that embraces the unglamorous side of life with a
           touch of humor and irony.
         </p>
-
         <p className={styles.text}>
           Unleash your inner scavenger as you browse through our virtual aisles,
           discovering the allure of items that have seen better days. Our
@@ -32,11 +33,13 @@ export default function AboutPage() {
           most ordinary of objects. Every piece comes with a history – a journey
           from functionality to fabulousness.
         </p>
-        <TestButton type="cartLink" />
-        <TestButton type="link" to="/" />
-        <TestButton type="addCartItem" />
-        <TestButton type="removeCartItem" />
-        <TestButton />
+        <Button type="cartLink" />
+        <Button type="link" to="/" />
+        <Button type="addCartItem" />
+        <Button type="removeCartItem" />
+        <Button />
+        <CookieButton />
+        Value: {JSON.stringify(getCookie)}
       </div>
     </div>
   );

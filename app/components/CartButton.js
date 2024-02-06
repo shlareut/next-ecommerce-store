@@ -24,9 +24,6 @@ export default function CartButton(props) {
                 ? { ...item, quantity: (item.quantity += 1) }
                 : item,
             );
-            // Testing out local storage below
-            // window.localStorage.setItem('cart', JSON.stringify(newCart));
-            // END TEST
             Cookies.set('cart', JSON.stringify(newCart));
             setCart(newCart);
             notify();
@@ -43,10 +40,7 @@ export default function CartButton(props) {
               currency: props.productCurrency,
               quantity: 1,
             });
-            // Testing out local storage below
-            // window.localStorage.setItem('cart', JSON.stringify(newCart));
             Cookies.set('cart', JSON.stringify(newCart));
-            // END TEST
             setCart(newCart);
             notify();
           }

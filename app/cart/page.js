@@ -3,7 +3,7 @@
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 import { useContext } from 'react';
-import RemoveFromCartButton from '../components/RemoveFromCartButton';
+import Button from '../components/Button';
 import { CartContext } from '../context/CartContext';
 import styles from './page.module.scss';
 
@@ -12,9 +12,6 @@ export default function CartPage() {
   const sum = cart.reduce((accumulator, item) => {
     return (accumulator += item.price * item.quantity);
   }, 0);
-  // LOCALSTORAGE TEST BELOW
-  // const localStorageCart = JSON.parse(window.localStorage.getItem('cart'));
-  // console.log(localStorageCart.length);
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.productWrapper}>
@@ -59,10 +56,6 @@ export default function CartPage() {
                                   }
                                 : cartItem,
                             );
-                            // window.localStorage.setItem(
-                            //   'cart',
-                            //   JSON.stringify(newCart),
-                            // );
                             Cookies.set('cart', JSON.stringify(newCart));
                             setCart(newCart);
                           } else {
@@ -70,10 +63,6 @@ export default function CartPage() {
                             const newCart = cart.filter(
                               (cartItem) => cartItem.id !== item.id,
                             );
-                            // window.localStorage.setItem(
-                            //   'cart',
-                            //   JSON.stringify(newCart),
-                            // );
                             Cookies.set('cart', JSON.stringify(newCart));
                             setCart(newCart);
                           }
@@ -95,10 +84,6 @@ export default function CartPage() {
                                 }
                               : cartItem,
                           );
-                          // window.localStorage.setItem(
-                          //   'cart',
-                          //   JSON.stringify(newCart),
-                          // );
                           Cookies.set('cart', JSON.stringify(newCart));
                           setCart(newCart);
                         }}
@@ -108,23 +93,7 @@ export default function CartPage() {
                     </div>
                   </div>
                   <div className={styles.totalQuantityWrapper}>
-                    <button
-                      className={styles.deleteButton}
-                      onClick={() => {
-                        const newCart = cart.filter(
-                          (cartItem) => cartItem.id !== item.id,
-                        );
-                        // window.localStorage.setItem(
-                        //   'cart',
-                        //   JSON.stringify(newCart),
-                        // );
-                        // END TEST
-                        Cookies.set('cart', JSON.stringify(newCart));
-                        setCart(newCart);
-                      }}
-                    >
-                      ✖️
-                    </button>
+                    <Button type="removeCartItem" itemId={item.id} />
                     <div className={styles.totalItemQuantity}>
                       {item.quantity * item.price}€
                     </div>
