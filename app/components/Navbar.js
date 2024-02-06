@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../public/logo/logo2.jpeg';
 import Button from './Button';
+import CartCount from './CartCount';
 import styles from './Navbar.module.scss';
 
 export default function Navbar() {
@@ -36,6 +37,9 @@ export default function Navbar() {
         </li>
         <li>
           <Button type="cartLink" />
+        </li>
+        <li>
+          <CartCount />
         </li>
       </ul>
     </div>

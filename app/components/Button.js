@@ -1,9 +1,8 @@
 'use client';
-import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'js-cookie';
 import Link from 'next/link';
 import React, { useContext } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { CartContext } from '../context/CartContext';
 import styles from './Button.module.scss';
 
@@ -63,7 +62,6 @@ export default function Button(props) {
             return <button>Empty button</button>;
         }
       })()}
-      <ToastContainer />
     </>
   );
 }

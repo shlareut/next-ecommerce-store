@@ -1,17 +1,11 @@
 'use client';
-import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'js-cookie';
 import React, { useContext } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
 import { CartContext } from '../context/CartContext';
 import styles from './CartButton.module.scss';
 
 export default function CartButton(props) {
   const { cart, setCart } = useContext(CartContext);
-  const notify = () =>
-    toast.success('Product added to cart!', {
-      position: 'bottom-right',
-    });
   return (
     <>
       <button
@@ -26,7 +20,6 @@ export default function CartButton(props) {
             );
             Cookies.set('cart', JSON.stringify(newCart));
             setCart(newCart);
-            notify();
           } else {
             // if a new item, it's added to the array
             const newCart = [...cart];
@@ -42,13 +35,11 @@ export default function CartButton(props) {
             });
             Cookies.set('cart', JSON.stringify(newCart));
             setCart(newCart);
-            notify();
           }
         }}
       >
         Add to cart
       </button>
-      <ToastContainer />
     </>
   );
 }
