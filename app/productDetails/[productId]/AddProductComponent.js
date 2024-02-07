@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import Button from '../../components/Button';
 import InputStepper from '../../components/InputStepper';
 import { updateCookie } from './actions';
-import styles from './HandleAddButton.module.scss';
+import styles from './AddProductComponent.module.scss';
 
 export default function HandleAddButton(props) {
   const [quantity, setQuantity] = useState(Number(1));

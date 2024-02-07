@@ -1,0 +1,11 @@
+.style {
+  font-weight: 800;
+  font-size: 18px;
+  background-color: transparent;
+  border: 0px;
+  &:hover {
+    transform: rotate(90deg);
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+}

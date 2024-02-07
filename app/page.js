@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getProductList } from './database/database';
+// import { getProductList } from './database/database';
 import { getDbProducts } from './database/db';
-import CartPage from './oldcart/page';
 import styles from './page.module.scss';
 
 export default async function HomePage() {

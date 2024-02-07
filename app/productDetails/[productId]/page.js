@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getProductDetails } from '../../database/database';
 import { getDbProductDetails } from '../../database/db';
-import HandleAddButton from './HandleAddButton';
+import AddProductComponent from './AddProductComponent';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -65,8 +65,18 @@ export default async function ProductDetailsPage(props) {
       <h1 className={styles.pageTitle}>{dbProductDetails?.title}</h1>
       <div className={styles.pageContent}>
         <div className={styles.pageBody}>
-          <div className={styles.imageWrapper}>
+          <div className={styles.imageContainer}>
+            <div className={styles.imageWrapper}>
+              <Image
+                className={styles.backgroundImage}
+                alt={dbProductDetails?.title}
+                src={dbProductDetails?.image}
+                width={300}
+                height={300}
+              />
+            </div>
             <Image
+              className={styles.image}
               alt={dbProductDetails?.title}
               src={dbProductDetails?.image}
               width={300}
@@ -88,7 +98,7 @@ export default async function ProductDetailsPage(props) {
         </div>
         <div className={styles.sidebar}>
           <div className={styles.sidebox}>
-            <HandleAddButton product={dbProductDetails} />
+            <AddProductComponent product={dbProductDetails} />
             {/* <CartButton
               productId={dbProductDetails.id}
               productTitle={dbProductDetails.title}

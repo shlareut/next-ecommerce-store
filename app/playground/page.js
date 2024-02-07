@@ -6,8 +6,13 @@ import styles from './page.module.scss';
 export default function PlaygroundPage() {
   return (
     <div className={styles.style}>
-      <InputStepper />
-      <HandleNotifyButton />
+      <div className={styles.containerWrapper}>
+        <div className={styles.container}>
+          <div className={styles.pieceOne}></div>
+          <div className={styles.pieceTwo}></div>
+        </div>
+      </div>
+      <div className={styles.sideBar}></div>
     </div>
   );
 }
