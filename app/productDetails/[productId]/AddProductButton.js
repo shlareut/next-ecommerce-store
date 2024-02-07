@@ -4,15 +4,12 @@ import { toast } from 'react-toastify';
 import Button from '../../components/Button';
 import InputStepper from '../../components/InputStepper';
 import { updateCookie } from './actions';
-import styles from './AddProductComponent.module.scss';
+import styles from './AddProductButton.module.scss';
 
-export default function HandleAddButton(props) {
+export default function AddProductButton(props) {
   const [quantity, setQuantity] = useState(Number(1));
   const sendToastMessage = () =>
-    toast.success(`${quantity} item(s) scavenged!`, {
-      position: 'top-right',
-      autoClose: 1000,
-    });
+    toast.success(`${quantity} item(s) scavenged!`);
   const addProduct = async () => {
     const newProduct = { ...props.product, quantity: Number(quantity) };
     await updateCookie(newProduct);

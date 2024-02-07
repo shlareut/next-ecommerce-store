@@ -4,9 +4,10 @@ import { getCookie } from '../../util/cookies';
 import CrossButton from '../components/CrossButton';
 import PageLink from '../components/PageLink';
 import styles from './page.module.scss';
+import RemoveProductButton from './RemoveProductButton';
 
 export default function CartPage() {
-  const cookie = getCookie('cookieCart');
+  const cookie = getCookie('cart');
   const cookieCart = JSON.parse(cookie);
   const sum = cookieCart.reduce((accumulator, item) => {
     return (accumulator += item.price * item.quantity);
@@ -46,7 +47,7 @@ export default function CartPage() {
                     </div>
                   </div>
                   <div className={styles.totalQuantityWrapper}>
-                    <CrossButton />
+                    <RemoveProductButton product={item} />
                     <div className={styles.totalItemQuantity}>
                       {item.quantity * item.price}€
                     </div>

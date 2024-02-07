@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getProductDetails } from '../../database/database';
 import { getDbProductDetails } from '../../database/db';
-import AddProductComponent from './AddProductComponent';
+import AddProductButton from './AddProductButton';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -98,7 +98,7 @@ export default async function ProductDetailsPage(props) {
         </div>
         <div className={styles.sidebar}>
           <div className={styles.sidebox}>
-            <AddProductComponent product={dbProductDetails} />
+            <AddProductButton product={dbProductDetails} />
             {/* <CartButton
               productId={dbProductDetails.id}
               productTitle={dbProductDetails.title}

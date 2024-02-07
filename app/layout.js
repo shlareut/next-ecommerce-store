@@ -32,7 +32,12 @@ export default function RootLayout({ children }) {
         <footer>
           <Footer />
         </footer>
-        <ToastContainer />
+        <ToastContainer
+          position="top-right"
+          autoClose={1000}
+          hideProgressBar={false}
+          pauseOnHover={false}
+        />
       </body>
     </html>
     // </CartProvider>

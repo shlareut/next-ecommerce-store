@@ -7,7 +7,7 @@ import PageLink from './PageLink';
 
 export default function Navbar() {
   const cartItems = () => {
-    const cartCookie = getCookie('cookieCart');
+    const cartCookie = getCookie('cart');
     const cart = !cartCookie ? [] : JSON.parse(cartCookie);
     const itemCount = cart.reduce((accumulator, item) => {
       return (accumulator += item.quantity);
