@@ -6,7 +6,7 @@ import { removeCookieItem } from './actions';
 
 export default function RemoveProductButton(props) {
   const sendToastMessage = () =>
-    toast.info(`${props.product.quantity} item(s) trashed!`);
+    toast.success(`${props.product.quantity} item(s) trashed!`);
   const removeProduct = async () => {
     await removeCookieItem(props.product);
     sendToastMessage();

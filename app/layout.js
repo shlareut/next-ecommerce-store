@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
           autoClose={1000}
           hideProgressBar={false}
           pauseOnHover={false}
+          theme="colored"
         />
       </body>
     </html>

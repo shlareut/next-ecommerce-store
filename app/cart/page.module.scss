@@ -10,6 +10,14 @@
   margin-bottom: 25px;
 }
 
+.emptyCartWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  width: fit-content;
+}
+
 .productCard {
   display: flex;
   flex-direction: row;
