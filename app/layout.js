@@ -5,7 +5,8 @@ import { Inter } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import CartProvider from './context/CartContext';
+
+// import CartProvider from './context/CartContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,21 +20,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <CartProvider>
-      <html lang="en">
-        <body className={inter.className}>
-          <header>
-            <nav>
-              <Navbar />
-            </nav>
-          </header>
-          <main>{children}</main>
-          <footer>
-            <Footer />
-          </footer>
-          <ToastContainer />
-        </body>
-      </html>
-    </CartProvider>
+    // <CartProvider>
+    <html lang="en">
+      <body className={inter.className}>
+        <header>
+          <nav>
+            <Navbar />
+          </nav>
+        </header>
+        <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
+        <ToastContainer />
+      </body>
+    </html>
+    // </CartProvider>
   );
 }

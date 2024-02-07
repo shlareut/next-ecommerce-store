@@ -1,11 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../public/logo/logo2.jpeg';
-import Button from './Button';
-import CartCount from './CartCount';
+import { getCookie } from '../../util/cookies';
 import styles from './Navbar.module.scss';
+import PageLink from './PageLink';
 
 export default function Navbar() {
+  const cartItems = () => {
+    const cartCookie = getCookie('cookieCart');
+    const cart = !cartCookie ? [] : JSON.parse(cartCookie);
+    const itemCount = cart.reduce((accumulator, item) => {
+      return (accumulator += item.quantity);
+    }, 0);
+    return itemCount;
+  };
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
@@ -30,16 +38,13 @@ export default function Navbar() {
       </div>
       <ul className={styles.linkList}>
         <li>
-          <Button type="link" to="/" />
+          <PageLink to="/">Products</PageLink>
         </li>
         <li>
-          <Button type="link" to="/about" />
+          <PageLink to="/about">About</PageLink>
         </li>
         <li>
-          <Button type="cartLink" />
-        </li>
-        <li>
-          <CartCount />
+          <PageLink to="/cart">🛒 {`(${cartItems()})`}</PageLink>
         </li>
       </ul>
     </div>

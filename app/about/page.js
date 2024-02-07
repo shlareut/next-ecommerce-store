@@ -1,13 +1,9 @@
-import { cookies } from 'next/headers';
 import Image from 'next/image';
 import React from 'react';
 import logo from '../../public/logo/logo.jpeg';
-import Button from '../components/Button';
-import CookieButton from './CookieButton';
 import styles from './page.module.scss';
 
 export default function AboutPage() {
-  const getCookie = cookies().getAll();
   return (
     <div className={styles.contentWrapper}>
       <Image alt="" src={logo} width={300} />
@@ -33,13 +29,6 @@ export default function AboutPage() {
           most ordinary of objects. Every piece comes with a history – a journey
           from functionality to fabulousness.
         </p>
-        <Button type="cartLink" />
-        <Button type="link" to="/" />
-        <Button type="addCartItem" />
-        <Button type="removeCartItem" />
-        <Button />
-        <CookieButton />
-        Value: {JSON.stringify(getCookie)}
       </div>
     </div>
   );

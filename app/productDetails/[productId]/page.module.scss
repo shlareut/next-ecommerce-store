@@ -1,4 +1,5 @@
 .pageWrapper {
+  border: 1px solid;
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -9,8 +10,9 @@
 }
 
 .pageContent {
+  border: 1px solid;
   display: grid;
-  grid-template-columns: 4fr 2fr;
+  grid-template-columns: 5fr 2fr;
   gap: 25px;
 }
 
@@ -18,9 +20,17 @@
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  position: relative;
   .sidebox {
-    width: 365px;
-    height: 200px;
+    // width: 365px;
+    // height: 200px;
+    padding: 50px;
     position: fixed;
     border: 1px solid;
     border-radius: 10px;
@@ -28,37 +38,5 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .sideboxTitle {
-    margin-bottom: 25px;
-  }
-}
-
-.itemQuantity {
-  border: 1px solid;
-  border-radius: 2px;
-  width: min-content;
-  color: grey;
-  font-weight: 600;
-  font-size: 12px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.quantityButton {
-  background-color: transparent;
-  padding: 5px 10px;
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  color: grey;
-  font-weight: 600;
-  font-size: 14px;
-  &:hover {
-    color: black;
-    cursor: pointer;
   }
 }

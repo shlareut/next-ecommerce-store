@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import CartButton from '../../components/CartButton';
 import { getProductDetails } from '../../database/database';
 import { getDbProductDetails } from '../../database/db';
-import { updateCookie } from './actions';
-import CookieButton from './CookieButton';
+import HandleAddButton from './HandleAddButton';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -90,13 +88,8 @@ export default async function ProductDetailsPage(props) {
         </div>
         <div className={styles.sidebar}>
           <div className={styles.sidebox}>
-            <div className={styles.sideboxTitle}>Add to cart</div>
-            <div className={styles.itemQuantity}>
-              <button className={styles.quantityButton}>−</button>
-              {/* Item quantity needs to come here */}0
-              <button className={styles.quantityButton}>+</button>
-            </div>
-            <CartButton
+            <HandleAddButton product={dbProductDetails} />
+            {/* <CartButton
               productId={dbProductDetails.id}
               productTitle={dbProductDetails.title}
               productCondition={dbProductDetails.condition}
@@ -106,6 +99,7 @@ export default async function ProductDetailsPage(props) {
               productCurrency={dbProductDetails.currency}
             />
             <CookieButton value={dbProductDetails} />
+            <Button onClick={notify} /> */}
           </div>
         </div>
       </div>
