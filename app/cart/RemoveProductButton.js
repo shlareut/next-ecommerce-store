@@ -5,8 +5,10 @@ import CrossButton from '../components/CrossButton';
 import { removeCookieItem } from './actions';
 
 export default function RemoveProductButton(props) {
-  const sendToastMessage = () =>
-    toast.success(`${props.product.quantity} item(s) trashed!`);
+  const sendToastMessage = () => {
+    const item = props.product.quantity === 1 ? 'item' : 'items';
+    return toast.success(`${props.product.quantity} ${item} trashed!`);
+  };
   const removeProduct = async () => {
     await removeCookieItem(props.product);
     sendToastMessage();

@@ -8,8 +8,10 @@ import styles from './AddProductButton.module.scss';
 
 export default function AddProductButton(props) {
   const [quantity, setQuantity] = useState(Number(1));
-  const sendToastMessage = () =>
-    toast.success(`${quantity} item(s) scavenged!`);
+  const sendToastMessage = () => {
+    const item = quantity === 1 ? 'item' : 'items';
+    return toast.success(`${quantity} ${item} scavenged!`);
+  };
   const addProduct = async () => {
     const newProduct = { ...props.product, quantity: Number(quantity) };
     await updateCookie(newProduct);

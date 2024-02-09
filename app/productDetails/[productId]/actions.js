@@ -17,7 +17,7 @@ export async function updateCookie(addedProduct) {
   } else {
     // else, add product with initial quantity.
     const newProducts = [...products];
-    newProducts.push(addedProduct);
+    newProducts.push({ id: addedProduct.id, quantity: 1 });
     await cookies().set('cart', JSON.stringify(newProducts));
   }
 }

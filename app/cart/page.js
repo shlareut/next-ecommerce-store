@@ -1,27 +1,51 @@
 import Image from 'next/image';
 import React from 'react';
 import { getCookie } from '../../util/cookies';
-import CrossButton from '../components/CrossButton';
 import PageLink from '../components/PageLink';
+import { getDbProducts } from '../database/db';
 import styles from './page.module.scss';
 import RemoveProductButton from './RemoveProductButton';
 
-export default function CartPage() {
+export default async function CartPage() {
+  const allDbProducts = await getDbProducts();
   const cookie = getCookie('cart');
-  const cookieCart = JSON.parse(cookie);
-  const sum = cookieCart.reduce((accumulator, item) => {
-    return (accumulator += item.price * item.quantity);
-  }, 0);
+  const cookieCart = !cookie ? '' : JSON.parse(cookie);
+  const cart = !cookie
+    ? ''
+    : cookieCart.map((cookieItem) => {
+        const dbProduct = allDbProducts.find(
+          (dbItem) => dbItem.id === cookieItem.id,
+        );
+        if (dbProduct) {
+          return {
+            id: dbProduct.id,
+            category: dbProduct.category,
+            condition: dbProduct.condition,
+            image: dbProduct.image,
+            title: dbProduct.title,
+            currency: dbProduct.currency,
+            isdeal: dbProduct.isdeal,
+            details: dbProduct.details,
+            price: dbProduct.price,
+            quantity: cookieItem.quantity,
+          };
+        }
+      });
+  const sum = !cookie
+    ? ''
+    : cart.reduce((accumulator, item) => {
+        return (accumulator += item.price * item.quantity);
+      }, 0);
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.productWrapper}>
-        {!cookieCart.length ? (
+        {!cart.length ? (
           <div className={styles.emptyCartWrapper}>
             <p>Your cart is empty</p>
             <PageLink to="/">Scavenge now!</PageLink>
           </div>
         ) : (
-          cookieCart.map((item) => {
+          cart.map((item) => {
             return (
               <div className={styles.productCard} key={`Product-${item.id}`}>
                 <Image
@@ -51,6 +75,7 @@ export default function CartPage() {
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
+                  {/* // NEED TO REVISE REMOVE BUTTON */}
                   <RemoveProductButton product={item} />
                   <div className={styles.totalItemQuantity}>
                     {item.quantity * item.price}€
@@ -62,8 +87,8 @@ export default function CartPage() {
         )}
       </div>
       <div className={styles.cartTotal}>
-        {!cookieCart.length ? '' : `Total: ${sum}€`}
-        {!cookieCart.length ? '' : <PageLink to="/checkout">Checkout</PageLink>}
+        {!cart.length ? '' : `Total: ${sum}€`}
+        {!cart.length ? '' : <PageLink to="/checkout">Checkout</PageLink>}
       </div>
     </div>
   );
