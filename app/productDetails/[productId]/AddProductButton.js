@@ -18,17 +18,23 @@ export default function AddProductButton(props) {
     sendToastMessage();
   };
   return (
-    <div className={styles.style}>
-      <InputStepper quantity={quantity} setQuantity={setQuantity} />
-      <Button
-        product={props.product}
-        onClick={() => {
-          addProduct();
-          setQuantity(1);
-        }}
-      >
-        Add
-      </Button>
+    <div className={styles.mainContainer}>
+      <div className={styles.subContainer}>
+        <InputStepper quantity={quantity} setQuantity={setQuantity} />
+        <Button
+          product={props.product}
+          onClick={() => {
+            addProduct();
+            setQuantity(1);
+          }}
+        >
+          Add
+        </Button>
+      </div>
+      <p className={styles.text}>
+        Total: {quantity * props.product.price}
+        {props.product.currency}
+      </p>
     </div>
   );
 }

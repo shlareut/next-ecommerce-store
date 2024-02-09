@@ -38,13 +38,18 @@ export default async function ProductDetailsPage(props) {
           </div>
           <div className={styles.secondCol}>
             <ul className={styles.secondColList}>
-              {dbProductDetails?.isdeal ? <li>🔥 Hot junk</li> : ''}
-              <li>
-                {dbProductDetails?.condition} {dbProductDetails?.category}
-              </li>
-              <li>
-                {dbProductDetails?.price}
-                {dbProductDetails?.currency}
+              {dbProductDetails?.isdeal ? (
+                <li className={styles.isdeal}>🔥 Hot junk •</li>
+              ) : (
+                ''
+              )}
+              <li className={styles.properties}>
+                <span className={styles.condition}>
+                  {dbProductDetails?.condition}
+                </span>{' '}
+                <span className={styles.category}>
+                  {dbProductDetails?.category}
+                </span>
               </li>
             </ul>
           </div>
@@ -58,7 +63,14 @@ export default async function ProductDetailsPage(props) {
       </div>
       <div className={styles.rightContainer}>
         <div className={styles.floatBox}>
-          <AddProductButton product={dbProductDetails} />
+          <div className={styles.floatBoxContent}>
+            <p className={styles.price}>
+              {Math.round(dbProductDetails?.price)}
+              {dbProductDetails?.currency}{' '}
+              <span className={styles.piece}>piece</span>
+            </p>
+            <AddProductButton product={dbProductDetails} />
+          </div>
         </div>
       </div>
     </div>

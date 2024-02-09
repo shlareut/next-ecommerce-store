@@ -1,8 +1,4 @@
 import React from 'react';
-import { getCookie } from '../../util/cookies';
-import InputStepper from '../components/InputStepper';
-import { getDbProducts } from '../database/db';
-import HandleNotifyButton from './HandleNotifyButton';
 import styles from './page.module.scss';
 
 export default async function PlaygroundPage() {

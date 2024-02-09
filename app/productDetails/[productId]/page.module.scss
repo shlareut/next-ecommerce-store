@@ -16,7 +16,7 @@
 
 .firstRow {
   width: inherit;
-  height: 200px;
+  height: 242px;
   overflow: hidden;
   border-radius: 25px;
   position: relative;
@@ -76,9 +76,12 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 25px;
+  gap: 10px;
   font-weight: 600;
+}
+
+.condition {
+  text-transform: capitalize;
 }
 
 .thirdRow {
@@ -100,7 +103,7 @@
 
 .floatBox {
   width: inherit;
-  padding: 60px 0px;
+  padding: 45px 0px;
   position: sticky;
   top: 120px;
   border-radius: 25px;
@@ -109,4 +112,20 @@
   align-items: center;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+}
+
+.floatBoxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.piece {
+  font-size: 50%;
+  font-weight: 200;
 }

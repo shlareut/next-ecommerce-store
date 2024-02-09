@@ -1,6 +1,16 @@
-.style {
+.mainContainer {
   display: flex;
   flex-direction: column;
+  gap: 25px;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: row;
   gap: 10px;
   align-items: center;
+}
+
+.text {
+  font-weight: 200;
 }
