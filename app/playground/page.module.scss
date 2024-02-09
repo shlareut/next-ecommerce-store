@@ -1,0 +1,71 @@
+.mainContainer {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 25px;
+  border: 1px solid;
+  min-height: 100dvh;
+}
+
+.leftContainer,
+.rightContainer {
+  height: inherit;
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.firstRow {
+  width: inherit;
+  height: 200px;
+  border: 1px solid blue;
+}
+
+.secondRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 25px;
+  width: 85%;
+  height: 200px;
+  border: 2px solid green;
+  margin-top: -140px;
+}
+
+.firstCol {
+  height: inherit;
+  width: 40%;
+  border: 2px solid black;
+}
+
+.secondCol {
+  height: 60%;
+  width: 60%;
+  border: 2px solid black;
+}
+
+.thirdRow {
+  margin-top: 25px;
+  width: inherit;
+  height: 50px;
+  border: 1px solid blue;
+}
+
+.fourthRow {
+  width: inherit;
+  height: 800px;
+  border: 1px solid blue;
+}
+
+.rightContainer {
+  position: relative;
+}
+
+.floatBox {
+  width: inherit;
+  height: 100px;
+  border: 1px solid green;
+  position: sticky;
+  top: 120px;
+}

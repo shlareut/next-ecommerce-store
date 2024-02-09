@@ -42,7 +42,7 @@ export default async function CartPage() {
         {!cart.length ? (
           <div className={styles.emptyCartWrapper}>
             <p>Your cart is empty</p>
-            <PageLink to="/">Scavenge now!</PageLink>
+            <PageLink to="/">Scavenge some junk!</PageLink>
           </div>
         ) : (
           cart.map((item) => {
@@ -75,7 +75,6 @@ export default async function CartPage() {
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
-                  {/* // NEED TO REVISE REMOVE BUTTON */}
                   <RemoveProductButton product={item} />
                   <div className={styles.totalItemQuantity}>
                     {item.quantity * item.price}€
