@@ -5,10 +5,19 @@
 }
 
 .subContainer {
+  margin-top: 12.5px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
+}
+
+.errorMessage {
+  font-weight: 200;
+  color: red;
+  font-size: 10px;
+  margin-top: -12.5px;
+  height: 5px;
 }
 
 .text {

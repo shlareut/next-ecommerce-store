@@ -12,6 +12,9 @@ export default function AddProductButton(props) {
     const item = quantity === 1 ? 'item' : 'items';
     return toast.success(`${quantity} ${item} scavenged!`);
   };
+  const sendErrorMessage = () => {
+    return toast.error('Error!!!!');
+  };
   const addProduct = async () => {
     const newProduct = { ...props.product, quantity: Number(quantity) };
     await updateCookie(newProduct);
@@ -24,13 +27,24 @@ export default function AddProductButton(props) {
         <Button
           product={props.product}
           onClick={() => {
-            addProduct();
-            setQuantity(1);
+            if (quantity < 1) {
+              sendErrorMessage();
+            } else if (quantity > 99) {
+              sendErrorMessage();
+            } else {
+              addProduct();
+              setQuantity(1);
+            }
           }}
         >
           Add
         </Button>
       </div>
+      <p className={styles.errorMessage}>
+        {quantity < 1 || quantity > 99
+          ? 'Please enter a quantity between 1 and 99.'
+          : ''}
+      </p>
       <p className={styles.text}>
         Total: {quantity * props.product.price}
         {props.product.currency}

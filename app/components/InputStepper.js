@@ -42,8 +42,10 @@ export default function InputStepper(props) {
         min={1}
         max={99}
         value={props.quantity}
-        // Potential breaking point for drone as the onChange technically prevents "removing" and entering a new value.
         onChange={(event) => {
+          props.setQuantity(event.currentTarget.value);
+        }}
+        onBlur={(event) => {
           if (event.currentTarget.value < 1) {
             props.setQuantity(1);
           } else if (event.currentTarget.value > 99) {
