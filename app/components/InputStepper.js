@@ -17,7 +17,7 @@ export default function InputStepper(props) {
     if (props.quantity <= 1) {
       setIsDecrementDisabled(true);
       setIsIncrementDisabled(false);
-    } else if (props.quantity >= 98) {
+    } else if (props.quantity >= 99) {
       setIsDecrementDisabled(false);
       setIsIncrementDisabled(true);
     } else {
