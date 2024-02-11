@@ -1,5 +1,3 @@
-import 'server-only';
-
 const productList = [
   {
     id: 1,
@@ -90,12 +88,39 @@ const productList = [
   },
 ];
 
-export function getProductList() {
-  return productList;
+export async function up(sql) {
+  for (const item of productList) {
+    await sql`
+  INSERT INTO products (
+    id,
+    ispublished,
+    image,
+    title,
+    category,
+    condition,
+    price,
+    currency,
+    isdeal,
+    details,
+  )
+  VALUES (
+    ${item.id},
+    ${item.isPublished},
+    ${item.image},
+    ${item.title},
+    ${item.category},
+    ${item.condition},
+    ${item.price},
+    ${item.currency},
+    ${item.isDeal},
+    ${item.details}
+  )
+  `;
+  }
 }
 
-export function getProductDetails(productId) {
-  return productList.find((product) => {
-    return productId === product.id;
-  });
+export async function down(sql) {
+  for (const item of productList) {
+    await sql`DELETE FROM products WHERE id = ${item.id}`;
+  }
 }
