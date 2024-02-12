@@ -52,9 +52,7 @@ export default async function ProductDetailsPage(props) {
         <div className={styles.thirdRow}>
           <h1>{dbProductDetails?.title}</h1>
         </div>
-        <div className={styles.fourthRow}>
-          {dbProductDetails?.details.description}
-        </div>
+        <div className={styles.fourthRow}>{dbProductDetails?.details}</div>
       </div>
       <div className={styles.rightContainer}>
         <div className={styles.floatBox}>

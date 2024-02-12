@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-// import { getProductList } from './database/database';
 import { getDbProducts } from './database/db';
+// import { getProductList } from './database/database';
 import styles from './page.module.scss';
 
 export default async function HomePage() {

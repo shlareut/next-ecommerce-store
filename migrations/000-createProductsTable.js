@@ -10,7 +10,7 @@ export async function up(sql) {
       price decimal NOT NULL,
       currency varchar(3) NOT NULL,
       isdeal boolean NOT NULL,
-      details json
+      details TEXT NOT NULL
     )
   `;
 }
