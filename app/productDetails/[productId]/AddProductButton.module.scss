@@ -1,11 +1,11 @@
 .mainContainer {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 12.5px;
 }
 
 .subContainer {
-  margin-top: 12.5px;
+  margin-top: 0px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -16,7 +16,7 @@
   font-weight: 200;
   color: red;
   font-size: 10px;
-  margin-top: -12.5px;
+  margin-top: 0px;
   height: 5px;
 }
 
