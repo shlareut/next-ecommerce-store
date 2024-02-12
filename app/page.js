@@ -14,10 +14,13 @@ export default async function HomePage() {
         {dbProducts.map((product) => {
           const strikePrice = Math.round(product.price * 1.5);
           return product.ispublished ? (
-            <div className={styles.productCard} key={`product-${product.id}`}>
+            <div
+              className={styles.productCard}
+              key={`product-${Number(product.id)}`}
+            >
               <Link
-                href={`/productDetails/${product.id}`}
-                data-test-id={`product-${product.id}`}
+                href={`/productDetails/${Number(product.id)}`}
+                data-test-id={`product-${Number(product.id)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

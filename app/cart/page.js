@@ -30,6 +30,7 @@ export default async function CartPage() {
             quantity: cookieItem.quantity,
           };
         }
+        return null;
       });
   const sum = !cookie
     ? ''
@@ -50,8 +51,8 @@ export default async function CartPage() {
             return (
               <div
                 className={styles.productCard}
-                key={`Product-${item.id}`}
-                data-test-id={`cart-product-${item.id}`}
+                key={`Product-${Number(item.id)}`}
+                data-test-id={`cart-product-${Number(item.id)}`}
               >
                 <Image
                   className={styles.productImage}
@@ -84,7 +85,7 @@ export default async function CartPage() {
                 </div>
                 <div className={styles.totalQuantityWrapper}>
                   <RemoveProductButton
-                    data-test-id={`cart-product-remove-${item.id}`}
+                    data-test-id={`cart-product-remove-${Number(item.id)}`}
                     product={item}
                   />
                   <div className={styles.totalItemQuantity}>
