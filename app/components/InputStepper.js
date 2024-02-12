@@ -37,6 +37,7 @@ export default function InputStepper(props) {
         −
       </button>
       <input
+        data-test-id="product-quantity"
         className={styles.input}
         type="number"
         min={1}

@@ -34,6 +34,7 @@ export default async function ProductDetailsPage(props) {
               src={dbProductDetails?.image}
               width={100}
               height={100}
+              data-test-id="product-image"
             />
           </div>
           <div className={styles.secondCol}>
@@ -65,7 +66,9 @@ export default async function ProductDetailsPage(props) {
         <div className={styles.floatBox}>
           <div className={styles.floatBoxContent}>
             <p className={styles.price}>
-              {Math.round(dbProductDetails?.price)}
+              <span data-test-id="product-price">
+                {Math.round(dbProductDetails?.price)}
+              </span>
               {dbProductDetails?.currency}{' '}
               <span className={styles.piece}>piece</span>
             </p>

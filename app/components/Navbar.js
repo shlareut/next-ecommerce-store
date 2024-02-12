@@ -38,13 +38,17 @@ export default function Navbar() {
       </div>
       <ul className={styles.linkList}>
         <li>
-          <PageLink to="/">Products</PageLink>
+          <PageLink to="/" data-test-id="products-link">
+            Products
+          </PageLink>
         </li>
         <li>
           <PageLink to="/about">About</PageLink>
         </li>
         <li>
-          <PageLink to="/cart">🛒 {`(${cartItems()})`}</PageLink>
+          <PageLink data-test-id="cart-link" to="/cart">
+            🛒 {<span data-test-id="cart-count">({cartItems()})</span>}
+          </PageLink>
         </li>
       </ul>
     </div>

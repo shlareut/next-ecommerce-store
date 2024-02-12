@@ -25,6 +25,7 @@ export default function AddProductButton(props) {
       <div className={styles.subContainer}>
         <InputStepper quantity={quantity} setQuantity={setQuantity} />
         <Button
+          data-test-id="product-add-to-cart"
           product={props.product}
           onClick={() => {
             if (quantity < 1) {

@@ -73,8 +73,9 @@ export default async function HomePage() {
             <div className={styles.productCard} key={`product-${product.id}`}>
               <Link
                 href={`/productDetails/${product.id}`}
-                // target="_blank"
-                // rel="noopener noreferrer"
+                data-test-id={`product-${product.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {product.isdeal ? (
                   <div className={styles.deal}>🔥 Hot junk</div>

@@ -38,6 +38,7 @@ export default async function CartPage() {
       }, 0);
   return (
     <div className={styles.pageWrapper}>
+      <h1 className={styles.title}>Shopping cart</h1>
       <div className={styles.productWrapper}>
         {!cart.length ? (
           <div className={styles.emptyCartWrapper}>
@@ -47,7 +48,11 @@ export default async function CartPage() {
         ) : (
           cart.map((item) => {
             return (
-              <div className={styles.productCard} key={`Product-${item.id}`}>
+              <div
+                className={styles.productCard}
+                key={`Product-${item.id}`}
+                data-test-id={`cart-product-${item.id}`}
+              >
                 <Image
                   className={styles.productImage}
                   alt="product"
@@ -71,11 +76,17 @@ export default async function CartPage() {
                   </div>
                   <div className={styles.itemQuantity}>
                     {/* Change quantity feature should be here. */}
-                    {/* {item.quantity} */}×{item.quantity}
+                    {/* {item.quantity} */}×{' '}
+                    <span data-test-id="cart-product-quantity-<product id>">
+                      {item.quantity}
+                    </span>
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
-                  <RemoveProductButton product={item} />
+                  <RemoveProductButton
+                    data-test-id={`cart-product-remove-${item.id}`}
+                    product={item}
+                  />
                   <div className={styles.totalItemQuantity}>
                     {item.quantity * item.price}€
                   </div>
@@ -86,8 +97,14 @@ export default async function CartPage() {
         )}
       </div>
       <div className={styles.cartTotal}>
-        {!cart.length ? '' : `Total: ${sum}€`}
-        {!cart.length ? '' : <PageLink to="/checkout">Checkout</PageLink>}
+        {!cart.length ? (
+          ''
+        ) : (
+          <span>
+            Total: <span data-test-id="cart-total">{sum}</span>€
+          </span>
+        )}
+        {!cart.length ? '' : <PageLink to="/checkout" data-test-id="cart-checkout">Checkout</PageLink>}
       </div>
     </div>
   );
