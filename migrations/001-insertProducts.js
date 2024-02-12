@@ -94,34 +94,40 @@ const productList = [
 export async function up(sql) {
   for (const item of productList) {
     await sql`
-  INSERT INTO products (
-    ispublished,
-    image,
-    title,
-    category,
-    condition,
-    price,
-    currency,
-    isdeal,
-    details
-  )
-  VALUES (
-    ${item.isPublished},
-    ${item.image},
-    ${item.title},
-    ${item.category},
-    ${item.condition},
-    ${item.price},
-    ${item.currency},
-    ${item.isDeal},
-    ${item.details}
-  )
-  `;
+      INSERT INTO
+        products (
+          ispublished,
+          image,
+          title,
+          category,
+          condition,
+          price,
+          currency,
+          isdeal,
+          details
+        )
+      VALUES
+        (
+          ${item.isPublished},
+          ${item.image},
+          ${item.title},
+          ${item.category},
+          ${item.condition},
+          ${item.price},
+          ${item.currency},
+          ${item.isDeal},
+          ${item.details}
+        )
+    `;
   }
 }
 
 export async function down(sql) {
   for (const item of productList) {
-    await sql`DELETE FROM products WHERE id = ${item.id}`;
+    await sql`
+      DELETE FROM products
+      WHERE
+        id = ${item.id}
+    `;
   }
 }

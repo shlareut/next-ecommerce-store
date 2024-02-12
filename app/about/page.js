@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <>
       <div className={styles.contentWrapper}>
-        <Image alt="" src={logo} width={300} />
+        <Image alt="logo" src={logo} width={300} />
         <div className={styles.textBlock}>
           <h1 className={styles.title}>About</h1>
           <p className={styles.text}>
@@ -28,7 +28,7 @@ export default function AboutPage() {
             Unleash your inner scavenger as you browse through our virtual
             aisles, discovering the allure of items that have seen better days.
             Our collection is a testament to the extraordinary potential found
-            in the most ordinary of objects. Every piece comes with a history –
+            in the most ordinary of objects. Every piece comes with a history -
             a journey from functionality to fabulousness.
           </p>
         </div>

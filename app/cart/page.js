@@ -104,7 +104,13 @@ export default async function CartPage() {
             Total: <span data-test-id="cart-total">{sum}</span>€
           </span>
         )}
-        {!cart.length ? '' : <PageLink to="/checkout" data-test-id="cart-checkout">Checkout</PageLink>}
+        {!cart.length ? (
+          ''
+        ) : (
+          <PageLink to="/checkout" data-test-id="cart-checkout">
+            Checkout
+          </PageLink>
+        )}
       </div>
     </div>
   );
