@@ -12,25 +12,29 @@
   },
   "dependencies": {
     "dotenv": "^16.4.1",
-    "js-cookie": "^3.0.5",
     "next": "14.1.0",
     "postgres": "^3.4.3",
     "react": "^18",
     "react-dom": "^18",
     "react-toastify": "^10.0.4",
     "sass": "^1.70.0",
+    "server-only": "^0.0.1",
     "sharp": "^0.33.2",
     "tsx": "^4.7.1"
   },
   "devDependencies": {
+    "@ts-safeql/eslint-plugin": "^2.0.3",
     "@types/js-cookie": "^3.0.6",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "eslint-config-upleveled": "^7.5.0",
+    "eslint-config-upleveled": "^7.8.0",
     "ley": "^0.8.1",
+    "libpg-query": "^15.0.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-embed": "^0.4.13",
+    "prettier-plugin-sql": "^0.18.0",
     "stylelint": "^16.2.0",
     "stylelint-config-upleveled": "^1.0.7",
-    "tsm": "^2.3.0",
     "typescript": "^5.3.3"
   }
 }
