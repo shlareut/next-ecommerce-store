@@ -6,16 +6,16 @@ dotenv.config();
 export const sql = postgres();
 
 type Product = {
-  id: number | null;
-  ispublished: boolean | null;
-  image: string | null;
-  title: string | null;
-  category: string | null;
-  condition: string | null;
-  price: number | null;
-  currency: string | null;
-  isdeal: boolean | null;
-  details: string | null;
+  id: number;
+  ispublished: boolean;
+  image: string;
+  title: string;
+  category: string;
+  condition: string;
+  price: number;
+  currency: string;
+  isdeal: boolean;
+  details: string;
 };
 
 export async function getDbProducts() {
