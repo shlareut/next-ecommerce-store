@@ -13,7 +13,7 @@ export default function AddProductButton(props) {
     return toast.success(`${quantity} ${item} scavenged!`);
   };
   const sendErrorMessage = () => {
-    return toast.error('Error!!!!');
+    return toast.error('Invalid quantity!');
   };
   const addProduct = async () => {
     const newProduct = { ...props.product, quantity: Number(quantity) };

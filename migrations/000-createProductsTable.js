@@ -1,7 +1,7 @@
 export async function up(sql) {
   await sql`
   CREATE TABLE products (
-    id integer PRIMARY key generated always AS identity,
+    id serial PRIMARY KEY,
     ispublished boolean NOT NULL,
     image varchar(30) NOT NULL,
     title varchar(30) NOT NULL,
