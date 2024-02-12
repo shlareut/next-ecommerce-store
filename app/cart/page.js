@@ -61,7 +61,7 @@ export default async function CartPage() {
                   height={150}
                 />
                 <div className={styles.productDetails}>
-                  <div className={styles.productTextWrapper}>
+                  <div>
                     <div className={styles.productTitle}>{item.title}</div>
                     <div className={styles.productProperties}>
                       <span className={styles.productCondition}>

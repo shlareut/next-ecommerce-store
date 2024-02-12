@@ -28,7 +28,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className={styles.logoText}>
-          <h1 className={styles.logoTitle}>
+          <h1>
             <Link href={'/'}>Junkyard</Link>
           </h1>
           <h2 className={styles.logoSubTitle}>

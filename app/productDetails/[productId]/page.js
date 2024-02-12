@@ -39,18 +39,12 @@ export default async function ProductDetailsPage(props) {
           </div>
           <div className={styles.secondCol}>
             <ul className={styles.secondColList}>
-              {dbProductDetails?.isdeal ? (
-                <li className={styles.isdeal}>🔥 Hot junk •</li>
-              ) : (
-                ''
-              )}
-              <li className={styles.properties}>
+              {dbProductDetails?.isdeal ? <li>🔥 Hot junk •</li> : ''}
+              <li>
                 <span className={styles.condition}>
                   {dbProductDetails?.condition}
                 </span>{' '}
-                <span className={styles.category}>
-                  {dbProductDetails?.category}
-                </span>
+                <span>{dbProductDetails?.category}</span>
               </li>
             </ul>
           </div>
