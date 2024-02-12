@@ -13,7 +13,9 @@ export default function CheckoutForm(props) {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        handlePurchase();
+        handlePurchase().catch((error) => {
+          console.log(error);
+        });
         router.push('/purchaseCompleted');
       }}
     >

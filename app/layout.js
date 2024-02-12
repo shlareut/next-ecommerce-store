@@ -1,6 +1,5 @@
 import './globals.scss';
 import 'react-toastify/dist/ReactToastify.css';
-import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer';

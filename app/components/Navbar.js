@@ -18,7 +18,7 @@ export default function Navbar() {
     <div className={styles.navbar}>
       <div className={styles.logo}>
         <div>
-          <Link href={'/'}>
+          <Link href="/">
             <Image
               className={styles.logoImage}
               alt="logo"
@@ -29,10 +29,10 @@ export default function Navbar() {
         </div>
         <div className={styles.logoText}>
           <h1>
-            <Link href={'/'}>Junkyard</Link>
+            <Link href="/">Junkyard</Link>
           </h1>
           <h2 className={styles.logoSubTitle}>
-            <Link href={'/'}>Only the best junk</Link>
+            <Link href="/">Only the best junk</Link>
           </h2>
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function Navbar() {
         </li>
         <li>
           <PageLink data-test-id="cart-link" to="/cart">
-            🛒 {<span data-test-id="cart-count">({cartItems()})</span>}
+            🛒 <span data-test-id="cart-count">({cartItems()})</span>
           </PageLink>
         </li>
       </ul>

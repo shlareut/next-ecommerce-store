@@ -9,57 +9,36 @@ export default function CheckoutPage() {
       <div className={styles.form}>
         <CheckoutForm>
           <label className={styles.input}>
-            First name{' '}
-            <input data-test-id="checkout-first-name" id="firstName" required />
+            First name <input data-test-id="checkout-first-name" required />
           </label>
           <label className={styles.input}>
-            Last name{' '}
-            <input data-test-id="checkout-last-name" id="lastName" required />
+            Last name <input data-test-id="checkout-last-name" required />
           </label>
           <label className={styles.input}>
-            Email{' '}
-            <input
-              data-test-id="checkout-email"
-              type="email"
-              id="email"
-              required
-            />
+            Email <input data-test-id="checkout-email" type="email" required />
           </label>
           <label className={styles.input}>
-            Street address{' '}
-            <input data-test-id="checkout-address" id="address" required />
+            Street address <input data-test-id="checkout-address" required />
           </label>
           <label className={styles.input}>
             Postal code{' '}
-            <input
-              data-test-id="checkout-postal-code"
-              type="number"
-              id="postalCode"
-              required
-            />
+            <input data-test-id="checkout-postal-code" type="number" required />
           </label>
           <label className={styles.input}>
-            City <input data-test-id="checkout-city" id="city" required />
+            City <input data-test-id="checkout-city" required />
           </label>
           <label className={styles.input}>
-            Country{' '}
-            <input data-test-id="checkout-country" id="country" required />
+            Country <input data-test-id="checkout-country" required />
           </label>
           <label className={styles.input}>
             Credit card number{' '}
-            <input
-              data-test-id="checkout-credit-card"
-              type="number"
-              id="creditCardNumber"
-              required
-            />
+            <input data-test-id="checkout-credit-card" type="number" required />
           </label>
           <label className={styles.input}>
             Expiry date{' '}
             <input
               data-test-id="checkout-expiration-date"
               type="date"
-              id="expiryDate"
               required
             />
           </label>
@@ -68,12 +47,11 @@ export default function CheckoutPage() {
             <input
               data-test-id="checkout-security-code"
               type="number"
-              id="ccv"
               required
             />
           </label>
           <label className={styles.input}>
-            Name on card <input id="cardName" required />
+            Name on card <input required />
           </label>
         </CheckoutForm>
       </div>

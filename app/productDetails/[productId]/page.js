@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { getProductDetails } from '../../database/database';
+// import { getProductDetails } from '../../database/database';
 import { getDbProductDetails } from '../../database/db';
 import AddProductButton from './AddProductButton';
 import styles from './page.module.scss';

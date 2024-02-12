@@ -33,7 +33,9 @@ export default function AddProductButton(props) {
             } else if (quantity > 99) {
               sendErrorMessage();
             } else {
-              addProduct();
+              addProduct().catch((error) => {
+                console.log(error);
+              });
               setQuantity(1);
             }
           }}
