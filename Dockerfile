@@ -10,6 +10,8 @@ COPY . .
 RUN yq --inplace --output-format=json '(.dependencies = .dependencies * (.devDependencies | to_entries | map(select(.key | test("^(typescript|@types/*|eslint-config-upleveled)$"))) | from_entries)) | (.devDependencies = {})' package.json
 RUN pnpm install
 RUN pnpm build
+# Added by Lars
+RUN pnpm install ley
 
 # Multi-stage builds: runner stage
 FROM node:lts-alpine AS runner
