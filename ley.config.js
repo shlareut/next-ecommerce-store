@@ -1,7 +1,9 @@
-import dotenv from 'dotenv';
+import { setEnvironment } from './util/config.js';
 
-dotenv.config();
+setEnvironment();
 
-const options = {};
+const options = {
+  ssl: Boolean(process.env.POSTGRES_URL),
+};
 
 export default options;

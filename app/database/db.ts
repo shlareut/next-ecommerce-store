@@ -1,8 +1,7 @@
-import dotenv from 'dotenv';
 import postgres from 'postgres';
+import { setEnvironment } from '../../util/config.js';
 
-dotenv.config();
-
+setEnvironment();
 export const sql = postgres();
 
 type Product = {

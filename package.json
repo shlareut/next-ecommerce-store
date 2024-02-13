@@ -23,6 +23,7 @@
     "tsx": "^4.7.1"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.2",
     "@ts-safeql/eslint-plugin": "^2.0.3",
     "@types/js-cookie": "^3.0.6",
     "@types/react": "^18.2.55",
