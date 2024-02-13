@@ -25,16 +25,23 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <header>
-          <nav>
-            <Navbar />
-          </nav>
           <Link
-            href="/"
             data-test-id="products-link"
+            href="/"
             style={{ position: 'absolute' }}
           >
             Products
           </Link>
+          <Link
+            data-test-id="cart-link"
+            href="/cart"
+            style={{ position: 'absolute' }}
+          >
+            Cart
+          </Link>
+          <nav>
+            <Navbar />
+          </nav>
         </header>
         <main>{children}</main>
         <footer>
