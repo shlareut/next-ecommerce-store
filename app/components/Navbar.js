@@ -46,8 +46,16 @@ export default function Navbar() {
           <PageLink to="/about">About</PageLink>
         </li>
         <li>
-          <PageLink data-test-id="cart-link" to="/cart">
-            🛒 <span data-test-id="cart-count">({cartItems()})</span>
+          <PageLink
+            // data-test-id="cart-link"
+            to="/cart"
+          >
+            🛒{' '}
+            <span
+            // data-test-id="cart-count"
+            >
+              ({cartItems()})
+            </span>
           </PageLink>
         </li>
       </ul>
