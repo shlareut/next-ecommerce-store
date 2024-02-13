@@ -22,18 +22,10 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <header>
           {/* BELOW ONLY FOR DRONE, REAL NAVIGATION IS INSIDE NAVBAR */}
-          <a
-            href="/"
-            data-test-id="products-link"
-            style={{ position: 'absolute' }}
-          >
+          <a href="/" data-test-id="products-link">
             Products
           </a>
-          <a
-            href="/cart"
-            data-test-id="cart-link"
-            style={{ position: 'absolute' }}
-          >
+          <a href="/cart" data-test-id="cart-link">
             Cart
           </a>
           {/* ABOVE ONLY FOR DRONE, REAL NAVIGATION IS INSIDE NAVBAR */}
