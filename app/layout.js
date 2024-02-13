@@ -5,9 +5,6 @@ import Link from 'next/link';
 import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import PageLink from './components/PageLink';
-
-// import CartProvider from './context/CartContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,24 +18,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // <CartProvider>
     <html lang="en">
       <body className={inter.className}>
         <header>
-          <Link
-            data-test-id="products-link"
+          <a
             href="/"
+            data-test-id="products-link"
             style={{ position: 'absolute' }}
           >
             Products
-          </Link>
-          <Link
-            data-test-id="cart-link"
+          </a>
+          <a
             href="/cart"
+            data-test-id="cart-link"
             style={{ position: 'absolute' }}
           >
             Cart
-          </Link>
+          </a>
           <nav>
             <Navbar />
           </nav>
@@ -56,6 +52,5 @@ export default function RootLayout({ children }) {
         />
       </body>
     </html>
-    // </CartProvider>
   );
 }
