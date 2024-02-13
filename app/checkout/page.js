@@ -9,30 +9,71 @@ export default function CheckoutPage() {
       <div className={styles.form}>
         <CheckoutForm>
           <label className={styles.input}>
-            First name <input data-test-id="checkout-first-name" required />
+            First name{' '}
+            <input
+              data-test-id="checkout-first-name"
+              placeholder="Donald"
+              required
+            />
           </label>
           <label className={styles.input}>
-            Last name <input data-test-id="checkout-last-name" required />
+            Last name{' '}
+            <input
+              data-test-id="checkout-last-name"
+              placeholder="Duck"
+              required
+            />
           </label>
           <label className={styles.input}>
-            Email <input data-test-id="checkout-email" type="email" required />
+            Email{' '}
+            <input
+              data-test-id="checkout-email"
+              type="email"
+              placeholder="donald@quack.com"
+              required
+            />
           </label>
           <label className={styles.input}>
-            Street address <input data-test-id="checkout-address" required />
+            Street address{' '}
+            <input
+              data-test-id="checkout-address"
+              placeholder="Quackstreet 99A"
+              required
+            />
           </label>
           <label className={styles.input}>
             Postal code{' '}
-            <input data-test-id="checkout-postal-code" type="number" required />
+            <input
+              data-test-id="checkout-postal-code"
+              type="number"
+              placeholder="38252874"
+              required
+            />
           </label>
           <label className={styles.input}>
-            City <input data-test-id="checkout-city" required />
+            City{' '}
+            <input
+              data-test-id="checkout-city"
+              placeholder="Duckburg"
+              required
+            />
           </label>
           <label className={styles.input}>
-            Country <input data-test-id="checkout-country" required />
+            Country{' '}
+            <input
+              data-test-id="checkout-country"
+              placeholder="Disney World"
+              required
+            />
           </label>
           <label className={styles.input}>
             Credit card number{' '}
-            <input data-test-id="checkout-credit-card" type="number" required />
+            <input
+              data-test-id="checkout-credit-card"
+              type="number"
+              placeholder="1111-2222-3333-4444"
+              required
+            />
           </label>
           <label className={styles.input}>
             Expiry date{' '}
@@ -47,11 +88,13 @@ export default function CheckoutPage() {
             <input
               data-test-id="checkout-security-code"
               type="number"
+              max={999}
+              placeholder="123"
               required
             />
           </label>
           <label className={styles.input}>
-            Name on card <input required />
+            Name on card <input placeholder="DUCK DONALD" required />
           </label>
         </CheckoutForm>
       </div>

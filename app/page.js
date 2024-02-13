@@ -21,8 +21,8 @@ export default async function HomePage() {
               <Link
                 href={`/productDetails/${Number(product.id)}`}
                 data-test-id={`product-${Number(product.id)}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                // target="_blank"
+                // rel="noopener noreferrer"
               >
                 {product.isdeal ? (
                   <div className={styles.deal}>🔥 Hot junk</div>
