@@ -1,6 +1,7 @@
 import './globals.scss';
 import 'react-toastify/dist/ReactToastify.css';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -27,9 +28,13 @@ export default function RootLayout({ children }) {
           <nav>
             <Navbar />
           </nav>
-          <PageLink to="/" data-test-id="products-link">
+          <Link
+            href="/"
+            data-test-id="products-link"
+            style={{ position: 'absolute' }}
+          >
             Products
-          </PageLink>
+          </Link>
         </header>
         <main>{children}</main>
         <footer>
