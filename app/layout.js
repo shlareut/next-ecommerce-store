@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import PageLink from './components/PageLink';
 
 // import CartProvider from './context/CartContext';
 
@@ -26,6 +27,9 @@ export default function RootLayout({ children }) {
           <nav>
             <Navbar />
           </nav>
+          <PageLink to="/" data-test-id="products-link">
+            Products
+          </PageLink>
         </header>
         <main>{children}</main>
         <footer>
