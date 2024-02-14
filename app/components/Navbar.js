@@ -10,9 +10,9 @@ export default function Navbar() {
     const cartCookie = getCookie('cart');
     const cart = !cartCookie ? [] : JSON.parse(cartCookie);
     const itemCount = cart.reduce((accumulator, item) => {
-      return (accumulator += item.quantity);
+      return (accumulator += item.quantity || 0);
     }, 0);
-    return Number(itemCount);
+    return Number.isNaN(itemCount) ? 0 : Number(itemCount);
   };
   return (
     <div className={styles.navbar}>
