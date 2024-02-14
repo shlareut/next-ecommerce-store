@@ -12,7 +12,7 @@ export default function Navbar() {
     const itemCount = cart.reduce((accumulator, item) => {
       return (accumulator += item.quantity);
     }, 0);
-    return itemCount;
+    return Number(itemCount);
   };
   return (
     <div className={styles.navbar}>
