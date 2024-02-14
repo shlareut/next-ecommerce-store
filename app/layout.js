@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </footer>
         <ToastContainer
-          position="top-right"
+          position="top-left"
           autoClose={1000}
           hideProgressBar={false}
           pauseOnHover={false}
