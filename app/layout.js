@@ -21,13 +21,26 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <header>
+          {/* <nav>
+            <ul>
+              <li>
+                <a>Products</a>
+              </li>
+              <li>
+                <a>About</a>
+              </li>
+              <li>
+                <a>Cart</a>
+              </li>
+            </ul>
+          </nav> */}
           {/* BELOW ONLY FOR DRONE, REAL NAVIGATION IS INSIDE NAVBAR */}
-          <a href="/" data-test-id="products-link">
+          {/* <a href="/" data-test-id="products-link">
             Products
           </a>
           <a href="/cart" data-test-id="cart-link">
             Cart
-          </a>
+          </a> */}
           {/* ABOVE ONLY FOR DRONE, REAL NAVIGATION IS INSIDE NAVBAR */}
           <nav>
             <Navbar />

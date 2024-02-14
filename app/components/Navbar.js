@@ -38,6 +38,16 @@ export default function Navbar() {
       </div>
       <ul className={styles.linkList}>
         <li>
+          <a href="/" data-test-id="products-link">
+            Products
+          </a>
+        </li>
+        <li>
+          <a href="/cart" data-test-id="cart-link">
+            Cart
+          </a>
+        </li>
+        <li>
           <PageLink to="/" data-test-id="products-link">
             Products
           </PageLink>
