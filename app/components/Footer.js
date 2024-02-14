@@ -2,5 +2,5 @@ import React from 'react';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
-  return <div className={styles.footer}>© 2024 Junkyard</div>;
+  return <div>© 2024 Junkyard</div>;
 }
