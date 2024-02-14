@@ -49,7 +49,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link className="styledLink" href="/cart" data-test-id="cart-link">
-            🛒 <span data-test-id="cart-count">({Number(cartItems())})</span>
+            🛒 <span data-test-id="cart-count">{Number(cartItems())}</span>
           </Link>
         </li>
         {/* <li>
