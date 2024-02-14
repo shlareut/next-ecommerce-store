@@ -19,6 +19,7 @@ export default async function ProductDetailsPage(props) {
       <div className={styles.leftContainer}>
         <div className={styles.firstRow}>
           <Image
+            data-test-id="product-image"
             className={styles.backgroundImage}
             alt={dbProductDetails?.title}
             src={dbProductDetails?.image}
@@ -34,7 +35,6 @@ export default async function ProductDetailsPage(props) {
               src={dbProductDetails?.image}
               width={100}
               height={100}
-              data-test-id="product-image"
             />
           </div>
           <div className={styles.secondCol}>
