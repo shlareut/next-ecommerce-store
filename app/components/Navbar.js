@@ -37,16 +37,16 @@ export default function Navbar() {
         </div>
       </div>
       <ul className={styles.linkList}>
-        <li>
-          <a href="/" data-test-id="products-link">
+        {/* <li>
+          <Link className="styledLink" href="/" data-test-id="products-link">
             Products
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/cart" data-test-id="cart-link">
+          <Link className="styledLink" href="/cart" data-test-id="cart-link">
             Cart
-          </a>
-        </li>
+          </Link>
+        </li> */}
         <li>
           <PageLink to="/" data-test-id="products-link">
             Products
@@ -56,16 +56,8 @@ export default function Navbar() {
           <PageLink to="/about">About</PageLink>
         </li>
         <li>
-          <PageLink
-            // data-test-id="cart-link"
-            to="/cart"
-          >
-            🛒{' '}
-            <span
-            // data-test-id="cart-count"
-            >
-              ({cartItems()})
-            </span>
+          <PageLink data-test-id="cart-link" to="/cart">
+            🛒 <span data-test-id="cart-count">({cartItems()})</span>
           </PageLink>
         </li>
       </ul>
