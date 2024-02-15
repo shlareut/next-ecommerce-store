@@ -14,7 +14,6 @@ export default async function ProductDetailsPage(props) {
   const dbProductDetails = await getDbProductDetails(
     Number(props.params.productId),
   );
-  console.log(dbProductDetails?.image);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.leftContainer}>
