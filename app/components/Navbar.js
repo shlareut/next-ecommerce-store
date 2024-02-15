@@ -28,12 +28,12 @@ export default function Navbar() {
           </Link>
         </div>
         <div className={styles.logoText}>
-          <h1>
+          <p className={styles.logoTitle}>
             <Link href="/">Junkyard</Link>
-          </h1>
-          <h2 className={styles.logoSubTitle}>
+          </p>
+          <p className={styles.logoSubTitle}>
             <Link href="/">Only the best junk</Link>
-          </h2>
+          </p>
         </div>
       </div>
       <ul className={styles.linkList}>
