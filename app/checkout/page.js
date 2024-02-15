@@ -93,9 +93,6 @@ export default function CheckoutPage() {
               required
             />
           </label>
-          <label className={styles.input}>
-            Name on card <input placeholder="DUCK DONALD" required />
-          </label>
         </CheckoutForm>
       </div>
     </>
