@@ -55,7 +55,17 @@ export default async function ProductDetailsPage(props) {
               width={100}
               height={100}
             /> */}
-            <ImageComponent image={dbProductDetails?.image} />
+            <img
+              data-test-id="product-image"
+              className={styles.image}
+              alt={dbProductDetails?.title}
+              src="/images/loading.jpeg"
+              width={100}
+              height={100}
+            />
+            {/* // Trying to implement a default image below, the issue still
+            persisted */}
+            {/* <ImageComponent image={dbProductDetails?.image} /> */}
           </div>
           <div className={styles.secondCol}>
             <ul className={styles.secondColList}>
