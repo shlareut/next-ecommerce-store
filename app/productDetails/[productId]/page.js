@@ -45,6 +45,7 @@ export default async function ProductDetailsPage(props) {
               width={100}
               height={100}
             /> */}
+            {console.log(dbProductDetails?.image)}
             <img
               data-test-id="product-image"
               className={styles.image}
