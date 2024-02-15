@@ -54,8 +54,16 @@ export default async function ProductDetailsPage(props) {
               height={100}
             /> */}
             {/* // Hardcoded image below works. */}
-
-            {!dbProductDetails.image ? (
+            <img
+              data-test-id="product-image"
+              className={styles.image}
+              alt={dbProductDetails.title}
+              src="/images/loading.jpeg"
+              width={100}
+              height={100}
+            />
+            {/* // Condition image below does not work. */}
+            {/* {!dbProductDetails.image ? (
               <img
                 data-test-id="product-image"
                 className={styles.image}
@@ -73,7 +81,7 @@ export default async function ProductDetailsPage(props) {
                 width={100}
                 height={100}
               />
-            )}
+            )} */}
             {/* // Trying to implement a default image below, the issue still
             persisted */}
             {/* <ImageComponent
