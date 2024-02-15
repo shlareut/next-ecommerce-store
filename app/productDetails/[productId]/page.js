@@ -27,7 +27,6 @@ export default async function ProductDetailsPage(props) {
             height={100}
           /> */}
           <img
-            data-test-id="product-image"
             className={styles.backgroundImage}
             alt={dbProductDetails?.title}
             src={dbProductDetails?.image}
@@ -47,6 +46,7 @@ export default async function ProductDetailsPage(props) {
               height={100}
             /> */}
             <img
+              data-test-id="product-image"
               className={styles.image}
               alt={dbProductDetails?.title}
               src={dbProductDetails?.image}
