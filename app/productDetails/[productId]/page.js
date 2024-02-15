@@ -53,7 +53,7 @@ export default async function ProductDetailsPage(props) {
               src={dbProductDetails?.image}
               width={100}
               height={100}
-              loading="eager"
+              loading="lazy"
             />
           </div>
           <div className={styles.secondCol}>

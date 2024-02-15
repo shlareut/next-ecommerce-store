@@ -44,9 +44,9 @@ export default function InputStepper(props) {
         max={99}
         value={props.quantity}
         onChange={(event) => {
-          props.setQuantity(event.currentTarget.value);
-        }}
-        onBlur={(event) => {
+          // WHEN BELOW IS ENABLED, IT ALLOWS e.g. NEGATIVE VALUES IN THE INPUT FIELD BUT WILL CHANGE IT ONCE UNFOCUSSED
+          // props.setQuantity(event.currentTarget.value);
+          // WHEN BELOW IS ENABLED, IT WILL NOT ALLOW NEGATIVE VALUES
           if (event.currentTarget.value < 1) {
             props.setQuantity(1);
           } else if (event.currentTarget.value > 99) {
@@ -55,6 +55,16 @@ export default function InputStepper(props) {
             props.setQuantity(event.currentTarget.value);
           }
         }}
+        // WHEN BELOW IS ENABLED, IT ALLOWS e.g. NEGATIVE VALUES IN THE INPUT FIELD BUT WILL CHANGE IT ONCE UNFOCUSSED
+        // onBlur={(event) => {
+        //   if (event.currentTarget.value < 1) {
+        //     props.setQuantity(1);
+        //   } else if (event.currentTarget.value > 99) {
+        //     props.setQuantity(99);
+        //   } else {
+        //     props.setQuantity(event.currentTarget.value);
+        //   }
+        // }}
       />
       <button
         className={styles.stepper}
