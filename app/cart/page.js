@@ -83,10 +83,9 @@ export default async function CartPage() {
                     {/* Change quantity feature should be here. */}
                     {/* {item.quantity} */}Subtotal:{' '}
                     <span data-test-id="cart-product-quantity-<product id>">
-                      {item.quantity}
+                      {Number(item.quantity)}
                     </span>{' '}
-                    * {item.price} = {itemSubTotal()}, only for drone:{' '}
-                    {Number(item.price * item.title)}
+                    * {Number(item.price)} = {itemSubTotal()}
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
@@ -94,9 +93,9 @@ export default async function CartPage() {
                     data-test-id={`cart-product-remove-${Number(item.id)}`}
                     product={item}
                   />
-                  <div className={styles.totalItemQuantity}>
+                  {/* <div className={styles.totalItemQuantity}>
                     {itemSubTotal()}€
-                  </div>
+                  </div> */}
                 </div>
               </div>
             );
