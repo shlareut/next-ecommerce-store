@@ -48,7 +48,9 @@ export default async function CartPage() {
           </div>
         ) : (
           cart.map((item) => {
-            const itemSubTotal = Number(item.quantity * item.price);
+            const itemSubTotal = () => {
+              return Number(item.quantity) * Number(item.price);
+            };
             return (
               <div
                 className={styles.productCard}
@@ -79,11 +81,11 @@ export default async function CartPage() {
                   </div>
                   <div className={styles.itemQuantity}>
                     {/* Change quantity feature should be here. */}
-                    {/* {item.quantity} */}Quantity:{' '}
+                    {/* {item.quantity} */}Subtotal:{' '}
                     <span data-test-id="cart-product-quantity-<product id>">
                       {item.quantity}
                     </span>{' '}
-                    , Subtotal: <span>{itemSubTotal}</span>
+                    * {item.price} = {itemSubTotal()}
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
@@ -92,7 +94,7 @@ export default async function CartPage() {
                     product={item}
                   />
                   <div className={styles.totalItemQuantity}>
-                    {itemSubTotal}€
+                    {itemSubTotal()}€
                   </div>
                 </div>
               </div>
