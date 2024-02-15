@@ -1,7 +1,9 @@
 import Image from 'next/image';
+import { render } from 'react-dom';
 // import { getProductDetails } from '../../database/database';
 import { getDbProductDetails } from '../../database/db';
 import AddProductButton from './AddProductButton';
+import ImageComponent from './ImageComponent';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -45,14 +47,15 @@ export default async function ProductDetailsPage(props) {
               width={100}
               height={100}
             /> */}
-            <img
+            {/* <img
               data-test-id="product-image"
               className={styles.image}
               alt={dbProductDetails?.title}
               src={dbProductDetails?.image}
               width={100}
               height={100}
-            />
+            /> */}
+            <ImageComponent image={dbProductDetails?.image} />
           </div>
           <div className={styles.secondCol}>
             <ul className={styles.secondColList}>
