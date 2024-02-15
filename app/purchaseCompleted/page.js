@@ -2,6 +2,11 @@ import React from 'react';
 import PageLink from '../components/PageLink';
 import styles from './page.module.scss';
 
+export const metadata = {
+  title: 'Thank you for your order',
+  description: 'All about junk.',
+};
+
 export default function PurchaseCompletedPage() {
   return (
     <>
