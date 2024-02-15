@@ -85,7 +85,8 @@ export default async function CartPage() {
                     <span data-test-id="cart-product-quantity-<product id>">
                       {item.quantity}
                     </span>{' '}
-                    * {item.price} = {itemSubTotal()}
+                    * {item.price} = {itemSubTotal()}, only for drone:{' '}
+                    {Number(item.price * item.title)}
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
