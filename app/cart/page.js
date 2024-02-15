@@ -90,10 +90,7 @@ export default async function CartPage() {
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
-                  <RemoveProductButton
-                    data-test-id={`cart-product-remove-${Number(item.id)}`}
-                    product={item}
-                  />
+                  <RemoveProductButton product={item} />
                   <div className={styles.totalItemQuantity}>
                     {itemSubTotal()}€
                   </div>

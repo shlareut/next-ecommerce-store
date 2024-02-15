@@ -13,5 +13,10 @@ export default function RemoveProductButton(props) {
     await removeCookieItem(props.product);
     sendToastMessage();
   };
-  return <CrossButton onClick={removeProduct} />;
+  return (
+    <CrossButton
+      dataTestId={`cart-product-remove-${Number(props.product.id)}`}
+      onClick={removeProduct}
+    />
+  );
 }
