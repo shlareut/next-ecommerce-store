@@ -19,33 +19,25 @@ export default async function ProductDetailsPage(props) {
       <div className={styles.leftContainer}>
         <div className={styles.firstRow}>
           {/* Drone fails when using <Image></Image> tag. */}
-          <Image
-            className={styles.backgroundImage}
-            alt={dbProductDetails?.title}
-            src={dbProductDetails?.image}
-            width={100}
-            height={100}
-          />
-          {/* <img
+          {/* <Image
             className={styles.backgroundImage}
             alt={dbProductDetails?.title}
             src={dbProductDetails?.image}
             width={100}
             height={100}
           /> */}
+          <img
+            className={styles.backgroundImage}
+            alt={dbProductDetails?.title}
+            src={dbProductDetails?.image}
+            width={100}
+            height={100}
+          />
         </div>
         <div className={styles.secondRow}>
           <div className={styles.firstCol}>
             {/* Drone fails when using <Image></Image> tag. */}
-            <Image
-              data-test-id="product-image"
-              className={styles.image}
-              alt={dbProductDetails?.title}
-              src={dbProductDetails?.image}
-              width={100}
-              height={100}
-            />
-            {/* <img
+            {/* <Image
               data-test-id="product-image"
               className={styles.image}
               alt={dbProductDetails?.title}
@@ -53,6 +45,15 @@ export default async function ProductDetailsPage(props) {
               width={100}
               height={100}
             /> */}
+            <img
+              data-test-id="product-image"
+              className={styles.image}
+              alt={dbProductDetails?.title}
+              src={dbProductDetails?.image}
+              width={100}
+              height={100}
+              loading="eager"
+            />
           </div>
           <div className={styles.secondCol}>
             <ul className={styles.secondColList}>
