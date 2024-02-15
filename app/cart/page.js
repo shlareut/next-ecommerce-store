@@ -90,7 +90,8 @@ export default async function CartPage() {
                       {Number(item.quantity)}
                     </p>
                     <p>{Number(item.price)}</p>
-                    <p>{itemSubTotal()}</p>
+                    <p>{Number(item.quantity) * Number(item.price)}</p>
+                    {/* <p>{itemSubTotal()}</p> */}
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
