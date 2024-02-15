@@ -4,7 +4,11 @@ import styles from './Button.module.scss';
 
 export default function Button(props) {
   return (
-    <button className={styles.style} onClick={props.onClick}>
+    <button
+      data-test-id={props.dataTestId}
+      className={styles.style}
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
   );

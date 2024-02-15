@@ -25,7 +25,7 @@ export default function AddProductButton(props) {
       <div className={styles.subContainer}>
         <InputStepper quantity={quantity} setQuantity={setQuantity} />
         {/* // TESTING BUTTON BELOW */}
-        <button
+        {/* <button
           data-test-id="product-add-to-cart"
           onClick={() => {
             if (quantity < 1) {
@@ -41,9 +41,9 @@ export default function AddProductButton(props) {
           }}
         >
           Drone
-        </button>
+        </button> */}
         <Button
-          // data-test-id="product-add-to-cart"
+          dataTestId="product-add-to-cart"
           // product={props.product}
           onClick={() => {
             if (quantity < 1) {
