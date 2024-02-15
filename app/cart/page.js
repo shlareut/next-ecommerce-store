@@ -101,13 +101,9 @@ export default async function CartPage() {
         )}
       </div>
       <div className={styles.cartTotal}>
-        {!cart.length ? (
-          ''
-        ) : (
-          <span>
-            Total: <span data-test-id="cart-total">{sum}</span>€
-          </span>
-        )}
+        <span>
+          Total: <span data-test-id="cart-total">{Number(sum)}</span>€
+        </span>
         {!cart.length ? (
           ''
         ) : (
