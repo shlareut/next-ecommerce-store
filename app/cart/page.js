@@ -78,10 +78,12 @@ export default async function CartPage() {
                   </div>
                   <div className={styles.itemQuantity}>
                     {/* Change quantity feature should be here. */}
-                    {/* {item.quantity} */}×{' '}
+                    {/* {item.quantity} */}Quantity:{' '}
                     <span data-test-id="cart-product-quantity-<product id>">
                       {item.quantity}
-                    </span>
+                    </span>{' '}
+                    , Subtotal:{' '}
+                    <span>{Number(item.quantity * item.price)}</span>
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
