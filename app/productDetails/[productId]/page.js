@@ -26,13 +26,13 @@ export default async function ProductDetailsPage(props) {
             width={100}
             height={100}
           /> */}
-          <img
+          {/* <img
             className={styles.backgroundImage}
             alt={dbProductDetails?.title}
             src={dbProductDetails?.image}
             width={100}
             height={100}
-          />
+          /> */}
         </div>
         <div className={styles.secondRow}>
           <div className={styles.firstCol}>
