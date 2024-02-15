@@ -69,6 +69,7 @@ export default async function CartPage() {
                         {item.condition}
                       </span>{' '}
                       {item.category}
+                      <span className={styles.drone}>Junkyard</span>
                     </div>
                     <div className={styles.productPrice}>
                       {Math.round(item.price)}
