@@ -111,7 +111,7 @@ export default async function CartPage() {
         {!cart.length ? (
           ''
         ) : (
-          <PageLink to="/checkout" data-test-id="cart-checkout">
+          <PageLink to="/checkout" dataTestId="cart-checkout">
             Checkout
           </PageLink>
         )}
