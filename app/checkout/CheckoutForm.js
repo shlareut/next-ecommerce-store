@@ -20,7 +20,7 @@ export default function CheckoutForm(props) {
       }}
     >
       {props.children}
-      <Button data-test-id="checkout-confirm-order" type="submit">
+      <Button dataTestId="checkout-confirm-order" type="submit">
         {' '}
         Submit
       </Button>
