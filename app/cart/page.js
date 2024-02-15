@@ -75,7 +75,7 @@ export default async function CartPage() {
                       <span className={styles.drone}>Junkyard</span>
                     </div>
                     <div className={styles.productPrice}>
-                      {Math.round(item.price)}
+                      {Number(Math.round(item.price))}
                       {item.currency}
                     </div>
                   </div>
