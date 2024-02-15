@@ -70,25 +70,18 @@ export default function CheckoutPage() {
             Credit card number{' '}
             <input
               data-test-id="checkout-credit-card"
-              type="number"
               placeholder="1111-2222-3333-4444"
               required
             />
           </label>
           <label className={styles.input}>
             Expiry date{' '}
-            <input
-              data-test-id="checkout-expiration-date"
-              type="date"
-              required
-            />
+            <input data-test-id="checkout-expiration-date" required />
           </label>
           <label className={styles.input}>
             CCV{' '}
             <input
               data-test-id="checkout-security-code"
-              type="number"
-              max={999}
               placeholder="123"
               required
             />
