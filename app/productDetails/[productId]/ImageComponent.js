@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import styles from './ImageComponent.module.scss';
 
 export default function ImageComponent(props) {
   const [imageUrl, setImageUrl] = useState('/images/loading.jpeg');
@@ -13,11 +14,13 @@ export default function ImageComponent(props) {
   }, [props.image]);
   return (
     <img
+      className={styles.style}
       data-test-id="product-image"
-      alt="test123"
+      alt={props.alt}
       src={imageUrl}
       width={100}
       height={100}
+      loading="eager"
     />
   );
 }

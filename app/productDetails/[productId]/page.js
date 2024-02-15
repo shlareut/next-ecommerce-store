@@ -1,6 +1,7 @@
 // import { getProductDetails } from '../../database/database';
 import { getDbProductDetails } from '../../database/db';
 import AddProductButton from './AddProductButton';
+import ImageComponent from './ImageComponent';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -52,17 +53,21 @@ export default async function ProductDetailsPage(props) {
               width={100}
               height={100}
             /> */}
-            <img
+            {/* // Hardcoded image below works. */}
+            {/* <img
               data-test-id="product-image"
               className={styles.image}
               alt={dbProductDetails?.title}
               src="/images/loading.jpeg"
               width={100}
               height={100}
-            />
+            /> */}
             {/* // Trying to implement a default image below, the issue still
             persisted */}
-            {/* <ImageComponent image={dbProductDetails?.image} /> */}
+            <ImageComponent
+              image={dbProductDetails?.image}
+              alt={dbProductDetails?.title}
+            />
           </div>
           <div className={styles.secondCol}>
             <ul className={styles.secondColList}>
