@@ -75,23 +75,18 @@ export default async function CartPage() {
                       <span className={styles.drone}>Junkyard</span>
                     </div>
                     <div className={styles.productPrice}>
-                      {/* {Number(Math.round(item.price))}
-                      {item.currency} */}
+                      {Math.round(item.price)}
+                      {item.currency}
                     </div>
                   </div>
                   <div className={styles.itemQuantity}>
                     {/* Change quantity feature should be here. */}
-                    {/* {item.quantity} */}
-                    {/* <span data-test-id="cart-product-quantity-<product id>">
-                      {Number(item.quantity)}
-                    </span>{' '}
-                    x {Number(item.price)} = {itemSubTotal()} */}
-                    <p data-test-id="cart-product-quantity-<product id>">
-                      {Number(item.quantity)}
-                    </p>
-                    <p>{Number(item.price)}</p>
-                    <p>{Number(item.quantity) * Number(item.price)}</p>
-                    {/* <p>{itemSubTotal()}</p> */}
+                    {/* {item.quantity} */}Qty:
+                    <span
+                      data-test-id={`cart-product-quantity-${Number(item.id)}`}
+                    >
+                      {item.quantity}
+                    </span>
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
@@ -99,9 +94,9 @@ export default async function CartPage() {
                     data-test-id={`cart-product-remove-${Number(item.id)}`}
                     product={item}
                   />
-                  {/* <div className={styles.totalItemQuantity}>
+                  <div className={styles.totalItemQuantity}>
                     {itemSubTotal()}€
-                  </div> */}
+                  </div>
                 </div>
               </div>
             );

@@ -66,23 +66,23 @@
   font-weight: 600;
 }
 
-// .itemQuantity {
-//   border: 1px solid;
-//   border-radius: 2px;
-//   // width: min-content;
-//   color: grey;
-//   font-weight: 600;
-//   font-size: 12px;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   gap: 10px;
-//   // BELOW CAN BE REMOVED WHEN InputStepper IS ADDED
-//   width: 50px;
-//   padding: 5px 10px;
-//   justify-content: center;
-//   // UNTIL HERE
-// }
+.itemQuantity {
+  border: 1px solid;
+  border-radius: 2px;
+  // width: min-content;
+  color: grey;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  // BELOW CAN BE REMOVED WHEN InputStepper IS ADDED
+  width: 50px;
+  padding: 5px 10px;
+  justify-content: center;
+  // UNTIL HERE
+}
 
 .quantityButton {
   background-color: transparent;
