@@ -75,17 +75,22 @@ export default async function CartPage() {
                       <span className={styles.drone}>Junkyard</span>
                     </div>
                     <div className={styles.productPrice}>
-                      {Number(Math.round(item.price))}
-                      {item.currency}
+                      {/* {Number(Math.round(item.price))}
+                      {item.currency} */}
                     </div>
                   </div>
                   <div className={styles.itemQuantity}>
                     {/* Change quantity feature should be here. */}
-                    {/* {item.quantity} */}Subtotal:{' '}
-                    <span data-test-id="cart-product-quantity-<product id>">
+                    {/* {item.quantity} */}
+                    {/* <span data-test-id="cart-product-quantity-<product id>">
                       {Number(item.quantity)}
                     </span>{' '}
-                    * {Number(item.price)} = {itemSubTotal()}
+                    x {Number(item.price)} = {itemSubTotal()} */}
+                    <p data-test-id="cart-product-quantity-<product id>">
+                      {Number(item.quantity)}
+                    </p>
+                    <p>{Number(item.price)}</p>
+                    <p>{itemSubTotal()}</p>
                   </div>
                 </div>
                 <div className={styles.totalQuantityWrapper}>
