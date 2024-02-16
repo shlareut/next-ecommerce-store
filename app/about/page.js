@@ -10,11 +10,11 @@ export default function AboutPage() {
       <div className={styles.textBlock}>
         <h1 className={styles.title}>About</h1>
         <p className={styles.text}>
-          TEST Junkyard stands for the finest quality junk you can shop online.
-          Dive into an eclectic selection of discarded odds and ends, where "out
-          with the old" takes on a whole new meaning. Our online store is the
-          go-to destination for those who appreciate the beauty in the banal and
-          find charm in the discarded.
+          Junkyard stands for the finest quality junk you can shop online. Dive
+          into an eclectic selection of discarded odds and ends, where "out with
+          the old" takes on a whole new meaning. Our online store is the go-to
+          destination for those who appreciate the beauty in the banal and find
+          charm in the discarded.
         </p>
         <p className={styles.text}>
           At Junkyard, we've mastered the art of turning trash into treasure,

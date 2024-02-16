@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
 import { getCookie } from '../../util/cookies';
+import { Cart, CartItem, CookieItem } from '../../util/types';
 import PageLink from '../components/PageLink';
 import { getDbProducts } from '../database/db';
+import { cartSum } from './functions';
 import styles from './page.module.scss';
 import RemoveProductButton from './RemoveProductButton';
 
@@ -10,15 +12,16 @@ export default async function CartPage() {
   const allDbProducts = await getDbProducts();
   const cookie = getCookie('cart');
   const cookieCart = !cookie ? '' : JSON.parse(cookie);
-  const cart = !cookie
+  const cart: Cart = !cookie
     ? ''
-    : cookieCart.map((cookieItem) => {
+    : cookieCart.map((cookieItem: CookieItem) => {
         const dbProduct = allDbProducts.find(
           (dbItem) => dbItem.id === cookieItem.id,
         );
         if (dbProduct) {
-          return {
+          const cartItem: CartItem = {
             id: dbProduct.id,
+            ispublished: dbProduct.ispublished,
             category: dbProduct.category,
             condition: dbProduct.condition,
             image: dbProduct.image,
@@ -29,14 +32,15 @@ export default async function CartPage() {
             price: dbProduct.price,
             quantity: cookieItem.quantity,
           };
+          return cartItem;
         }
         return null;
       });
-  const sum = !cookie
-    ? ''
-    : cart.reduce((accumulator, item) => {
-        return (accumulator += item.price * item.quantity);
-      }, 0);
+  const sum = !cookie ? '' : cartSum(cart);
+  // Former function below, before putting it into functions.ts
+  // cart.reduce((accumulator, item) => {
+  //     return (accumulator += item.price * item.quantity);
+  //   }, 0);
   return (
     <div className={styles.pageWrapper}>
       <h1 className={styles.title}>Shopping cart</h1>
