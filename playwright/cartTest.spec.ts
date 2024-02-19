@@ -7,6 +7,8 @@ test('add and remove products', async ({ page }) => {
   const addButton = await page.getByRole('button', { name: 'Add' });
   await addButton.click();
   await page.goto('/cart');
+  const cartProduct = await page.locator('img[alt="product"]').first();
+  await expect(cartProduct).toBeVisible();
   // await page.goto('/productDetails/3');
   // // Add product
   // await page.getByRole('button', { name: 'Add' }).click();
