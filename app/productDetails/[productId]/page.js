@@ -1,6 +1,5 @@
 // backup: fetching products from static list instead of db.
 // import { getProductDetails } from '../../database/database';
-import { Product } from '../../../util/types';
 import { getDbProductDetails } from '../../database/db';
 import AddProductButton from './AddProductButton';
 import styles from './page.module.scss';
@@ -10,7 +9,7 @@ export const metadata = {
   description: 'All about junk.',
 };
 
-export default async function ProductDetailsPage(props: Product) {
+export default async function ProductDetailsPage(props) {
   // backup: fetching products from static list instead of db.
   // const productDetails = getProductDetails(Number(props.params.productId));
   const dbProductDetails = await getDbProductDetails(
