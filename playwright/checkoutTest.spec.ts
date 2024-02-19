@@ -7,7 +7,8 @@ test('add product and checkout', async ({ page }) => {
   await productCard.click();
   const addButton = await page.getByRole('button', { name: 'Add' });
   await addButton.click();
-  await page.goto('/cart');
+  const cartLink = await page.getByRole('link', { name: '🛒' });
+  await cartLink.click();
   const cartProduct = await page.locator('img[alt="product"]').first();
   await expect(cartProduct).toBeVisible();
 
