@@ -11,10 +11,10 @@ This react meme generator was created as part of the UpLeveled GmbH coding boot 
 
 ## Technologies
 
-Next.js
-Postgres.js
-Jest
-Playwright
+- Next.js
+- Postgres.js
+- Jest
+- Playwright
 
 ## Database Setup
 
