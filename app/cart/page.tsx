@@ -47,7 +47,7 @@ export default async function CartPage() {
       <div className={styles.productWrapper}>
         {!cart.length ? (
           <div className={styles.emptyCartWrapper}>
-            <p>Your cart is empty</p>
+            <p aria-label="emptyCartMessage">Your cart is empty</p>
             <PageLink to="/">Scavenge some junk!</PageLink>
           </div>
         ) : (
@@ -87,6 +87,7 @@ export default async function CartPage() {
                     {/* Change quantity feature should be here. */}
                     {/* {item.quantity} */}Qty:
                     <span
+                      aria-label="productQuantity"
                       data-test-id={`cart-product-quantity-${Number(item.id)}`}
                     >
                       {item.quantity}
