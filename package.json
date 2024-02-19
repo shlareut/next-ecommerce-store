@@ -22,15 +22,11 @@
     "sass": "^1.70.0",
     "server-only": "^0.0.1",
     "sharp": "^0.33.2",
-    "ts-jest": "^29.1.2",
-    "ts-node": "^10.9.2",
     "tsx": "^4.7.1"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@playwright/test": "^1.41.2",
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.1",
     "@ts-safeql/eslint-plugin": "^2.0.3",
     "@types/jest": "^29.5.12",
     "@types/js-cookie": "^3.0.6",

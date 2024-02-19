@@ -1,7 +1,7 @@
 // import { getProductDetails } from '../../database/database';
 import { getDbProductDetails } from '../../database/db';
 import AddProductButton from './AddProductButton';
-import ImageComponent from './ImageComponent';
+// import ImageComponent from './ImageComponent';
 import styles from './page.module.scss';
 
 export const metadata = {
