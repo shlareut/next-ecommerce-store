@@ -4,8 +4,8 @@ This react meme generator was created as part of the UpLeveled GmbH coding boot 
 
 <table>
   <tr>
-    <td><img src='./public/preview/1.png' width='500'></td>
-    <td><img src='./public/preview/2.png' width='500'></td>
+    <td><img src='./public/preview/1.jpg' width='500'></td>
+    <td><img src='./public/preview/2.jpg' width='500'></td>
   </tr>
 </table>
 
