@@ -3,6 +3,11 @@ import React from 'react';
 import logo from '../../public/logo/logo.jpeg';
 import styles from './page.module.scss';
 
+export const metadata = {
+  title: 'About',
+  description: 'All about junk.',
+};
+
 export default function AboutPage() {
   return (
     <div className={styles.contentWrapper}>

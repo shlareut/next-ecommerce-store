@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: {
     default: 'All about junk | Junkyard',
-    template: '%s | Junkyard 💩',
+    template: '%s | Junkyard',
   },
-  description: 'Only the best junk',
+  description: 'Only the best junk.',
 };
 
 export default function RootLayout({ children }) {

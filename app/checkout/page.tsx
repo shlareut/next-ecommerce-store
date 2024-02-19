@@ -2,6 +2,11 @@ import React from 'react';
 import CheckoutForm from './CheckoutForm';
 import styles from './page.module.scss';
 
+export const metadata = {
+  title: 'Checkout',
+  description: 'All about junk.',
+};
+
 export default function CheckoutPage() {
   return (
     <>

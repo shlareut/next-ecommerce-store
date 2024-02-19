@@ -1,7 +1,8 @@
+// backup: fetching products from static list instead of db.
 // import { getProductDetails } from '../../database/database';
+import { Product } from '../../../util/types';
 import { getDbProductDetails } from '../../database/db';
 import AddProductButton from './AddProductButton';
-// import ImageComponent from './ImageComponent';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -9,7 +10,8 @@ export const metadata = {
   description: 'All about junk.',
 };
 
-export default async function ProductDetailsPage(props) {
+export default async function ProductDetailsPage(props: Product) {
+  // backup: fetching products from static list instead of db.
   // const productDetails = getProductDetails(Number(props.params.productId));
   const dbProductDetails = await getDbProductDetails(
     Number(props.params.productId),
@@ -45,6 +47,7 @@ export default async function ProductDetailsPage(props) {
               width={100}
               height={100}
             /> */}
+            {/* Drone fails during second run when <img></img> tag. */}
             {/* <img
               data-test-id="product-image"
               className={styles.image}
@@ -57,37 +60,11 @@ export default async function ProductDetailsPage(props) {
             <img
               data-test-id="product-image"
               className={styles.image}
-              alt={dbProductDetails.title}
+              alt={dbProductDetails?.title}
               src="/images/loading.jpeg"
               width={100}
               height={100}
             />
-            {/* // Condition image below does not work. */}
-            {/* {!dbProductDetails.image ? (
-              <img
-                data-test-id="product-image"
-                className={styles.image}
-                alt={dbProductDetails.title}
-                src="/images/loading.jpeg"
-                width={100}
-                height={100}
-              />
-            ) : (
-              <img
-                data-test-id="product-image"
-                className={styles.image}
-                alt={dbProductDetails.title}
-                src={dbProductDetails.image}
-                width={100}
-                height={100}
-              />
-            )} */}
-            {/* // Trying to implement a default image below, the issue still
-            persisted */}
-            {/* <ImageComponent
-              image={dbProductDetails?.image}
-              alt={dbProductDetails?.title}
-            /> */}
           </div>
           <div className={styles.secondCol}>
             <ul className={styles.secondColList}>
@@ -111,7 +88,7 @@ export default async function ProductDetailsPage(props) {
           <div className={styles.floatBoxContent}>
             <p className={styles.price}>
               <span data-test-id="product-price">
-                {Math.round(dbProductDetails?.price)}
+                {Math.round(Number(dbProductDetails?.price))}
               </span>
               {dbProductDetails?.currency}{' '}
               <span className={styles.piece}>piece</span>
