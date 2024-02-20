@@ -47,23 +47,23 @@ export default async function ProductDetailsPage(props) {
               height={100}
             /> */}
             {/* Drone fails during second run when <img></img> tag. */}
-            {/* <img
+            <img
               data-test-id="product-image"
               className={styles.image}
               alt={dbProductDetails?.title}
               src={dbProductDetails?.image}
               width={100}
               height={100}
-            /> */}
+            />
             {/* // Hardcoded image below works. */}
-            <img
+            {/* <img
               data-test-id="product-image"
               className={styles.image}
               alt={dbProductDetails?.title}
               src="/images/loading.jpeg"
               width={100}
               height={100}
-            />
+            /> */}
           </div>
           <div className={styles.secondCol}>
             <ul className={styles.secondColList}>
